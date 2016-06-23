@@ -81,6 +81,283 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/23/jicheng/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-23T07:24:19.000Z" itemprop="datePublished"> Published 2016-06-23</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>###1.继承有什么作用?<br>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
+<p>###2.有几种常见创建对象的方式? 举例说明?<br>&#160; &#160; &#160; &#160;1.对象字面量，无法传参</p>
+<pre><code>var person={
+       name:&apos;simple&apos;,
+       sayName:function(){
+         console.log(&apos;my name is &apos;+this.name);
+     }
+}
+ person.sayName();
+</code></pre><p>&#160; &#160; &#160; &#160;2.工厂模式,可以传参，不能识别对象类型</p>
+<pre><code>function Person(name){
+       var obj={
+       name:&apos;simple&apos;,
+       sayName:function(){
+       console.log(&apos;my name is &apos;+this.name);
+   }
+};
+  return obj;
+}
+ var p1=Person(&apos;simple&apos;);//实例化
+ p1.sayName();//方法调用
+</code></pre><p>&#160; &#160; &#160; &#160;3.构造函数,可以传参，可以识别对象类型，但会造成重复造轮子</p>
+<pre><code>function Person(name){
+     this.name=name;
+     this.sayName=function(){
+          console.log(&apos;my name is&apos;+this.name);
+   }
+}
+  var p1=new Person(&apos;simple&apos;);
+  p1.sayName();
+</code></pre><p>&#160; &#160; &#160; &#160;4.原型模式</p>
+<pre><code>function Person(name){
+    //个性化的属性或方法
+       this.name=name;
+ }
+Person.prototype.sayName=function(){
+  console.log(&apos;my name is &apos;+this.name);
+}
+  var p1=new Person(&apos;simple&apos;);
+  p1.sayName();
+</code></pre><p>###3.下面两种写法有什么区别?<br>&#160; &#160; &#160; &#160;</p>
+<pre><code>代码//方法1
+function People(name, sex){
+ this.name = name;
+ this.sex = sex;
+ this.printName = function(){
+    console.log(this.name);
+  }
+}
+var p1 = new People(&apos;饥人谷&apos;, 2)//这种方法每new一个对象，就要创建一次printName方法，new n个，需要创建n次printName方法
+//方法2
+function Person(name, sex){
+ this.name = name;
+ this.sex = sex;
+}
+Person.prototype.printName = function(){
+console.log(this.name);
+}
+var p1 = new Person(&apos;若愚&apos;, 27);//new n个对象，只需要创建1次printName方法
+</code></pre><p>###4.Object.create 有什么作用？兼容性如何？如何使用？<br>&#160; &#160; &#160; &#160;Object.create(proto, [ propertiesObject ]),是ES5中提出的一种新的对象创建方式,<br>&#160; &#160;&#160;&#160;兼容性：只兼容IE9+，Chrome5+，Firefox 4.0+，Opear 11.60+,Safari 5+<br>&#160; &#160;&#160;&#160;第一个参数是要继承的原型或null,第二个参数可选,是对象的属性描述符，里面可以添加一些自定义的属性和方法。<br>&#160; &#160; &#160; &#160;propertiesObject:默认都为false<br>&#160; &#160; &#160; &#160;数据属性：<br>&#160; &#160; &#160; &#160;writable:是否可任意写<br>&#160; &#160; &#160;&#160; configurable：是否能够删除，是否能够被修改<br>&#160; &#160; &#160;&#160; enumerable：是否能用 for in 枚举<br>&#160; &#160; &#160;&#160; value：值<br>&#160; &#160; &#160;&#160;访问属性：<br>&#160; &#160; &#160;&#160; get(): 访问<br>&#160; &#160; &#160;&#160; set(): 设置</p>
+<pre><code>var obj = {
+    a:function(){
+        console.log(100)
+    },
+    b:function(){
+        console.log(200)
+    },
+    c:function(){
+        console.log(300)
+    }
+
+};
+
+ newObj = {};
+
+var newObj = Object.create(obj,{
+    t1:{
+        value:&apos;yupeng&apos;,
+        writable:true
+    },
+    bar: {
+        configurable: false,
+        get: function() { return bar; },
+        set: function(value) { bar=value }
+    }
+
+})
+
+console.log(newObj.a());//100
+console.log(newObj.t1);//yupeng
+newObj.t1=&apos;yupeng1&apos;
+console.log(newObj.t1);//yupeng1  如果writable:false则为yupeng
+newObj.bar=201;
+console.log(newObj.bar)//通过set设值201
+</code></pre><p>###5.hasOwnProperty有什么作用？ 如何使用？<br>&#160; &#160; &#160; &#160;判断实例化后的对象的属性是属于父类的还是自己的，如果是属于自己的，返回true,属于父类的，返回false</p>
+<pre><code> function Person(name, sex){
+  this.name=name;
+  this.sex=sex;
+}
+
+Person.prototype.getName = function(){
+  return this.name;
+};
+
+function Male(name, sex, age){
+  // Person.call(this,name,sex);
+  this.age=age;
+}
+
+Male.prototype= new Person();
+var p1 = new Male(&apos;若愚&apos;, &apos;男&apos;, 27);
+p1.lc=&apos;hz&apos;;
+var p2 = new Male(&apos;simple&apos;, &apos;女&apos;, 18);
+p1.hasOwnProperty(&apos;name&apos;)//false
+p1.hasOwnProperty(&apos;sex&apos;)//false
+p1.hasOwnProperty(&apos;age&apos;)//true
+p1.hasOwnProperty(&apos;lc&apos;)//true
+p2.hasOwnProperty(&apos;lc&apos;)//false
+</code></pre><p>###6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((<a href="http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html" target="_blank" rel="external">http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html</a>)) </p>
+<pre><code>//不支持第二个参数
+if (typeof Object.create != &apos;function&apos;) {//首先判断是否兼容
+Object.create = (function() {
+var Temp = function() {};
+return function (prototype) {
+  if (arguments.length &gt; 1) {
+    throw Error(&apos;Second argument not supported&apos;);
+  }
+  if(prototype !== Object(prototype)) {
+    throw TypeError(&apos;Argument must be an object&apos;);
+  }
+  if (prototype === null) {
+    throw Error(&apos;null [[Prototype]] not supported&apos;);
+  }
+  Temp.prototype = prototype;
+  var result = new Temp();
+  Temp.prototype = null;
+  return result;
+};
+ })();
+ }
+</code></pre><p>###7.如下代码中call的作用是什么?</p>
+<pre><code>function Person(name, sex){
+  this.name = name;
+  this.sex = sex;
+}
+function Male(name, sex, age){
+Person.call(this, name, sex);    //把this的作用域指向Person，因此得以继承Person的name和sex属性
+this.age = age;
+</code></pre><p>}</p>
+<p>###8.补全代码，实现继承</p>
+<pre><code>function Person(name, sex){
+// todo ...
+}
+
+Person.prototype.getName = function(){
+// todo ...
+};    
+
+function Male(name, sex, age){
+ //todo ...
+}
+
+//todo ...
+Male.prototype.getAge = function(){
+//todo ...
+};
+
+var simple = new Male(‘简单’, &apos;男&apos;, 27);
+simple.printName();
+</code></pre><p>&#160; &#160; &#160; &#160;法1，只能在新浏览器上运行</p>
+<pre><code>function Person(name, sex){
+  this.name=name;
+  this.sex=sex;
+}
+
+Person.prototype.getName = function(){
+  return this.name;
+};
+
+function Male(name, sex, age){
+  Person.call(this,name,sex);
+  this.age=age;
+}
+
+inherit(Person,Male);
+
+Male.prototype.getAge = function(){
+  return this.age;
+};
+Male.prototype.printName=function(){
+  console.log(&quot;my name is &quot;+this.name);
+}
+var simple = new Male(‘简单’, &apos;男&apos;, 27);
+simple.printName();
+
+function inherit(superType,subType){
+var _prototype=Object.create(superType.prototype);//拷贝一份新的prototype
+_prototype.constructor=subType;//将constructor指向子类
+subType.prototype=_prototype;//将子类的prototype指向新的prototype
+
+}
+</code></pre><p>&#160; &#160; &#160; &#160;法2，兼容性较好</p>
+<pre><code>function Person(name, sex){
+  this.name=name;
+  this.sex=sex;
+}
+
+Person.prototype.getName = function(){
+  return this.name;
+};
+
+function Male(name, sex, age){
+  Person.call(this,name,sex);
+  this.age=age;
+}
+
+Male.prototype= new Person();//new Person只是为了去获取Person里的方法
+Male.prototype.constructor=Male;
+
+Male.prototype.getAge = function(){
+  return this.age;
+};
+Male.prototype.printName=function(){
+  console.log(&quot;my name is &quot;+this.name);
+}
+
+var simple = new Male(‘简单’, &apos;男&apos;, 27);
+simple.printName();
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/23/hello-world/" title="Hello World" itemprop="url">Hello World</a>
   </h1>
   <p class="article-author">By
