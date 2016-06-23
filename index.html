@@ -212,7 +212,7 @@ p1.hasOwnProperty(&apos;sex&apos;)//false
 p1.hasOwnProperty(&apos;age&apos;)//true
 p1.hasOwnProperty(&apos;lc&apos;)//true
 p2.hasOwnProperty(&apos;lc&apos;)//false
-</code></pre><h3 id="6-实现Object-create的-polyfill，如：（ps-写个-函数create，实现-Object-create-的功能）-什么是-polyfill？-http-www-cnblogs-com-ziyunfei-archive-2012-09-17-2688829-html"><a href="#6-实现Object-create的-polyfill，如：（ps-写个-函数create，实现-Object-create-的功能）-什么是-polyfill？-http-www-cnblogs-com-ziyunfei-archive-2012-09-17-2688829-html" class="headerlink" title="6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html))"></a>6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((<a href="http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html" target="_blank" rel="external">http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html</a>))</h3><pre><code>//不支持第二个参数
+</code></pre><h3 id="6-实现Object-create的-polyfill"><a href="#6-实现Object-create的-polyfill" class="headerlink" title="6.实现Object.create的 polyfill"></a>6.实现Object.create的 polyfill</h3><pre><code>//不支持第二个参数
 if (typeof Object.create != &apos;function&apos;) {//首先判断是否兼容
 Object.create = (function() {
 var Temp = function() {};
