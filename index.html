@@ -94,8 +94,8 @@
 </header>
     <div class="article-content">
         
-        <p>###1.继承有什么作用?<br>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
-<p>###2.有几种常见创建对象的方式? 举例说明?<br>&#160; &#160; &#160; &#160;1.对象字面量，无法传参</p>
+        <h3 id="1-继承有什么作用"><a href="#1-继承有什么作用" class="headerlink" title="1.继承有什么作用?"></a>1.继承有什么作用?</h3><p>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
+<h3 id="2-有几种常见创建对象的方式-举例说明"><a href="#2-有几种常见创建对象的方式-举例说明" class="headerlink" title="2.有几种常见创建对象的方式? 举例说明?"></a>2.有几种常见创建对象的方式? 举例说明?</h3><p>&#160; &#160; &#160; &#160;1.对象字面量，无法传参</p>
 <pre><code>var person={
        name:&apos;simple&apos;,
        sayName:function(){
@@ -134,7 +134,7 @@ Person.prototype.sayName=function(){
 }
   var p1=new Person(&apos;simple&apos;);
   p1.sayName();
-</code></pre><p>###3.下面两种写法有什么区别?<br>&#160; &#160; &#160; &#160;</p>
+</code></pre><h3 id="3-下面两种写法有什么区别"><a href="#3-下面两种写法有什么区别" class="headerlink" title="3.下面两种写法有什么区别?"></a>3.下面两种写法有什么区别?</h3><p>&#160; &#160; &#160; &#160;</p>
 <pre><code>代码//方法1
 function People(name, sex){
  this.name = name;
@@ -153,7 +153,7 @@ Person.prototype.printName = function(){
 console.log(this.name);
 }
 var p1 = new Person(&apos;若愚&apos;, 27);//new n个对象，只需要创建1次printName方法
-</code></pre><p>###4.Object.create 有什么作用？兼容性如何？如何使用？<br>&#160; &#160; &#160; &#160;Object.create(proto, [ propertiesObject ]),是ES5中提出的一种新的对象创建方式,<br>&#160; &#160;&#160;&#160;兼容性：只兼容IE9+，Chrome5+，Firefox 4.0+，Opear 11.60+,Safari 5+<br>&#160; &#160;&#160;&#160;第一个参数是要继承的原型或null,第二个参数可选,是对象的属性描述符，里面可以添加一些自定义的属性和方法。<br>&#160; &#160; &#160; &#160;propertiesObject:默认都为false<br>&#160; &#160; &#160; &#160;数据属性：<br>&#160; &#160; &#160; &#160;writable:是否可任意写<br>&#160; &#160; &#160;&#160; configurable：是否能够删除，是否能够被修改<br>&#160; &#160; &#160;&#160; enumerable：是否能用 for in 枚举<br>&#160; &#160; &#160;&#160; value：值<br>&#160; &#160; &#160;&#160;访问属性：<br>&#160; &#160; &#160;&#160; get(): 访问<br>&#160; &#160; &#160;&#160; set(): 设置</p>
+</code></pre><h3 id="4-Object-create-有什么作用？兼容性如何？如何使用？"><a href="#4-Object-create-有什么作用？兼容性如何？如何使用？" class="headerlink" title="4.Object.create 有什么作用？兼容性如何？如何使用？"></a>4.Object.create 有什么作用？兼容性如何？如何使用？</h3><p>&#160; &#160; &#160; &#160;Object.create(proto, [ propertiesObject ]),是ES5中提出的一种新的对象创建方式,<br>&#160; &#160;&#160;&#160;兼容性：只兼容IE9+，Chrome5+，Firefox 4.0+，Opear 11.60+,Safari 5+<br>&#160; &#160;&#160;&#160;第一个参数是要继承的原型或null,第二个参数可选,是对象的属性描述符，里面可以添加一些自定义的属性和方法。<br>&#160; &#160; &#160; &#160;propertiesObject:默认都为false<br>&#160; &#160; &#160; &#160;数据属性：<br>&#160; &#160; &#160; &#160;writable:是否可任意写<br>&#160; &#160; &#160;&#160; configurable：是否能够删除，是否能够被修改<br>&#160; &#160; &#160;&#160; enumerable：是否能用 for in 枚举<br>&#160; &#160; &#160;&#160; value：值<br>&#160; &#160; &#160;&#160;访问属性：<br>&#160; &#160; &#160;&#160; get(): 访问<br>&#160; &#160; &#160;&#160; set(): 设置</p>
 <pre><code>var obj = {
     a:function(){
         console.log(100)
@@ -188,7 +188,7 @@ newObj.t1=&apos;yupeng1&apos;
 console.log(newObj.t1);//yupeng1  如果writable:false则为yupeng
 newObj.bar=201;
 console.log(newObj.bar)//通过set设值201
-</code></pre><p>###5.hasOwnProperty有什么作用？ 如何使用？<br>&#160; &#160; &#160; &#160;判断实例化后的对象的属性是属于父类的还是自己的，如果是属于自己的，返回true,属于父类的，返回false</p>
+</code></pre><h3 id="5-hasOwnProperty有什么作用？-如何使用？"><a href="#5-hasOwnProperty有什么作用？-如何使用？" class="headerlink" title="5.hasOwnProperty有什么作用？ 如何使用？"></a>5.hasOwnProperty有什么作用？ 如何使用？</h3><p>&#160; &#160; &#160; &#160;判断实例化后的对象的属性是属于父类的还是自己的，如果是属于自己的，返回true,属于父类的，返回false</p>
 <pre><code> function Person(name, sex){
   this.name=name;
   this.sex=sex;
@@ -212,8 +212,7 @@ p1.hasOwnProperty(&apos;sex&apos;)//false
 p1.hasOwnProperty(&apos;age&apos;)//true
 p1.hasOwnProperty(&apos;lc&apos;)//true
 p2.hasOwnProperty(&apos;lc&apos;)//false
-</code></pre><p>###6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((<a href="http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html" target="_blank" rel="external">http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html</a>))</p>
-<pre><code>//不支持第二个参数
+</code></pre><h3 id="6-实现Object-create的-polyfill，如：（ps-写个-函数create，实现-Object-create-的功能）-什么是-polyfill？-http-www-cnblogs-com-ziyunfei-archive-2012-09-17-2688829-html"><a href="#6-实现Object-create的-polyfill，如：（ps-写个-函数create，实现-Object-create-的功能）-什么是-polyfill？-http-www-cnblogs-com-ziyunfei-archive-2012-09-17-2688829-html" class="headerlink" title="6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html))"></a>6.实现Object.create的 polyfill，如：（ps: 写个 函数create，实现 Object.create 的功能）[什么是 polyfill？] ((<a href="http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html" target="_blank" rel="external">http://www.cnblogs.com/ziyunfei/archive/2012/09/17/2688829.html</a>))</h3><pre><code>//不支持第二个参数
 if (typeof Object.create != &apos;function&apos;) {//首先判断是否兼容
 Object.create = (function() {
 var Temp = function() {};
@@ -234,8 +233,7 @@ return function (prototype) {
 };
  })();
  }
-</code></pre><p>###7.如下代码中call的作用是什么?</p>
-<pre><code>function Person(name, sex){
+</code></pre><h3 id="7-如下代码中call的作用是什么"><a href="#7-如下代码中call的作用是什么" class="headerlink" title="7.如下代码中call的作用是什么?"></a>7.如下代码中call的作用是什么?</h3><pre><code>function Person(name, sex){
   this.name = name;
   this.sex = sex;
 }
@@ -243,8 +241,7 @@ function Male(name, sex, age){
 Person.call(this, name, sex);    //把this的作用域指向Person，因此得以继承Person的name和sex属性
 this.age = age;
 </code></pre><p>}</p>
-<p>###8.补全代码，实现继承</p>
-<pre><code>function Person(name, sex){
+<h3 id="8-补全代码，实现继承"><a href="#8-补全代码，实现继承" class="headerlink" title="8.补全代码，实现继承"></a>8.补全代码，实现继承</h3><pre><code>function Person(name, sex){
 // todo ...
 }
 
