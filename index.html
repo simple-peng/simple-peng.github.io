@@ -85,20 +85,61 @@
 </header>
     <div class="article-content">
         
-        <p>####1.有如下代码，解释Person、prototype、<code>__proto__</code>、p、constructor之间的关联<br>&#160; &#160; &#160; &#160;</p>
+        <p>###1.有如下代码，解释Person、prototype、<code>__proto__</code>、p、constructor之间的关联<br>&#160; &#160; &#160; &#160;</p>
 <pre><code>function Person(name){
 this.name = name;
 }
 Person.prototype.sayName = function(){
 console.log(&apos;My name is :&apos; + this.name);
 }
-var p = new Person(&quot;若愚&quot;)
+var p = new Person(&quot;simple&quot;)
 p.sayName();
 </code></pre><p>&#160; &#160; &#160; &#160;Person:一个函数，每个函数都有prototype属性，<br>&#160; &#160; &#160; &#160;prototype属性指向函数的原型，<br>&#160; &#160; &#160; &#160;这个原型里边有constructor,constructor指向Person，<br>&#160; &#160; &#160; &#160;可以为原型对象添加其他属性和方法，所以原型里边还有新添加的属性和方法，<br>&#160; &#160; &#160; &#160;p是person的实例，每个实例都有<strong>proto</strong>属性，这个属性指向创造它的函数的原型。</p>
-<p>####2.上例中，对对象 p可以这样调用 p.toString()。toString是哪里来的? 画出原型图?并解释什么是原型链。<br>&#160; &#160; &#160; &#160;首先每个类型都会有一个内部属性prototype，称为原型，原型的值要么是一个对象要么是NULL，如果它的值是一个对象，则这个对象也一定有自己的原型，这样就形成了一条线性的链，称为原型链。原型链的图示：<br><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/1c6228fd-964a-4345-b136-aea3c655f515.png" alt="原型图"><br><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/ab1aac53-e478-4e10-a6f6-2e21951d2f7b.png" alt="原型链"></p>
-<p>#####.对String做扩展，实现如下方式获取字符串中频率最高的字符<br>&#160; &#160; &#160; &#160;<br>    //todo….<br>    var str = ‘ahbbccdeddddfg’;<br>    var ch = str.getMostOften();<br>    console.log(ch); //d , 因为d 出现了5次<br>&#160; &#160; &#160; &#160;代码如下：<br>    String.prototype.getMostOften=function(){<br>    this.arr=this.split(‘’);<br>    this.count=[];//存储次数<br>    this.arr2=[];//存储字符<br>    var maxnum=1;<br>    for (var i = 0; i &lt; this.arr.length; i++) {<br>    var nextnum=1;<br>    for (var j=i+1; j &lt; this.arr.length; j++) {<br>      if(this.arr[i]==this.arr[j]){<br>        nextnum++;<br>        this.arr.splice(j,1);//删除相同项<br>        j–;<br>      }<br>    }<br>        this.count.push(nextnum);<br>        if(nextnum&gt;maxnum){<br>          maxnum=nextnum;<br>          this.arr2.push(this.arr[i]);<br>        }<br>      }<br>      return this.arr2[this.arr2.length-1];//次数最多的字符为最后一个<br>    }<br>     var str=’ahbbccdeddddfg’;<br>     str.getMostOften();</p>
-<p>####4.instanceOf有什么作用？内部逻辑是如何实现的？<br>&#160; &#160; &#160; &#160;instanceOf用来判断一个对象是否是一个类型的实例<br>&#160; &#160; &#160; &#160;如果一个对象<code>__proto__</code>等于另一个类型的prototype，那么这个对象就为此类型的一个实例<br>    function isInstanceOf(obj,Func){<br>    var <strong>proto</strong>=obj.<strong>proto</strong>;<br>    do{<br>    if(<strong>proto</strong>===Func.prototype){<br>      return true;<br>    }<br>    if(!<strong>proto</strong>){//<strong>proto</strong>最后为NULL<br>      return false;<br>    }<br>    }while(<strong>proto</strong>=<strong>proto</strong>.<strong>proto</strong>)<br>    return false;<br>    }</p>
-
+<p>###2.上例中，对对象 p可以这样调用 p.toString()。toString是哪里来的? 画出原型图?并解释什么是原型链。<br>&#160; &#160; &#160; &#160;首先每个类型都会有一个内部属性prototype，称为原型，原型的值要么是一个对象要么是NULL，如果它的值是一个对象，则这个对象也一定有自己的原型，这样就形成了一条线性的链，称为原型链。原型链的图示：<br><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/1c6228fd-964a-4345-b136-aea3c655f515.png" alt="原型图"><br><img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/ab1aac53-e478-4e10-a6f6-2e21951d2f7b.png" alt="原型链"></p>
+<p>###3.对String做扩展，实现如下方式获取字符串中频率最高的字符<br>&#160; &#160; &#160; &#160;</p>
+<pre><code>//todo....
+var str = &apos;ahbbccdeddddfg&apos;;
+var ch = str.getMostOften();
+console.log(ch); //d , 因为d 出现了5次
+</code></pre><p>&#160; &#160; &#160; &#160;代码如下：</p>
+<pre><code>String.prototype.getMostOften=function(){
+this.arr=this.split(&apos;&apos;);
+this.count=[];//存储次数
+this.arr2=[];//存储字符
+var maxnum=1;
+for (var i = 0; i &lt; this.arr.length; i++) {
+var nextnum=1;
+for (var j=i+1; j &lt; this.arr.length; j++) {
+  if(this.arr[i]==this.arr[j]){
+    nextnum++;
+    this.arr.splice(j,1);//删除相同项
+    j--;
+  }
+}
+    this.count.push(nextnum);
+    if(nextnum&gt;maxnum){
+      maxnum=nextnum;
+      this.arr2.push(this.arr[i]);
+    }
+  }
+  return this.arr2[this.arr2.length-1];//次数最多的字符为最后一个
+}
+ var str=&apos;ahbbccdeddddfg&apos;;
+ str.getMostOften();
+</code></pre><p>###4.instanceOf有什么作用？内部逻辑是如何实现的？<br>&#160; &#160; &#160; &#160;instanceOf用来判断一个对象是否是一个类型的实例<br>&#160; &#160; &#160; &#160;如果一个对象<code>__proto__</code>等于另一个类型的prototype，那么这个对象就为此类型的一个实例</p>
+<pre><code>function isInstanceOf(obj,Func){
+var __proto__=obj.__proto__;
+do{
+if(__proto__===Func.prototype){
+  return true;
+}
+if(!__proto__){//__proto__最后为NULL
+  return false;
+}
+}while(__proto__=__proto__.__proto__)
+return false;
+}
+</code></pre>
         
         
         <p class="article-more-link">
