@@ -1,39 +1,41 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>test</title>
-</head>
-<body>
-<h1>hello world</h1>
-<p>I'm hosted with GitHub Pages.</p>
-
-</body>
-</html>
-=======
 
  <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>pingtingpeng&#39;s blog</title>
+    <title>继承 | pingtingpeng&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="pingtingpeng">
     
 
     
-    <meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pingtingpeng's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="1.继承有什么作用?&amp;#160; &amp;#160; &amp;#160; &amp;#160;提高了代码的复用性，便于扩展软件功能。
+2.有几种常见创建对象的方式? 举例说明?&amp;#160; &amp;#160; &amp;#160; &amp;#160;1.对象字面量，无法传参
+var person={
+       name:&amp;apos;simple&amp;apos;,
+       sayName:function(){
+         c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="继承">
+<meta property="og:url" content="http://yoursite.com/2016/06/23/继承/index.html">
 <meta property="og:site_name" content="pingtingpeng's blog">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="1.继承有什么作用?&amp;#160; &amp;#160; &amp;#160; &amp;#160;提高了代码的复用性，便于扩展软件功能。
+2.有几种常见创建对象的方式? 举例说明?&amp;#160; &amp;#160; &amp;#160; &amp;#160;1.对象字面量，无法传参
+var person={
+       name:&amp;apos;simple&amp;apos;,
+       sayName:function(){
+         c">
+<meta property="og:updated_time" content="2016-06-23T09:40:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pingtingpeng's blog">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="继承">
+<meta name="twitter:description" content="1.继承有什么作用?&amp;#160; &amp;#160; &amp;#160; &amp;#160;提高了代码的复用性，便于扩展软件功能。
+2.有几种常见创建对象的方式? 举例说明?&amp;#160; &amp;#160; &amp;#160; &amp;#160;1.对象字面量，无法传参
+var person={
+       name:&amp;apos;simple&amp;apos;,
+       sayName:function(){
+         c">
 
     
     <link rel="alternative" href="/atom.xml" title="pingtingpeng&#39;s blog" type="application/atom+xml">
@@ -78,68 +80,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/25/html基础1/" title="html基础(问答一)" itemprop="url">html基础(问答一)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="pingtingpeng" target="_blank" itemprop="author">pingtingpeng</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-25T02:57:28.000Z" itemprop="datePublished"> 发表于 2016-06-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>一.网页乱码是如何产生的<br>UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。<br>乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他国家的语言了，这时候需要在html里加<code>&lt;meta charset=“gbk”&gt;</code>指定浏览器的解码方式为gbk。</p>
-<p>二.颜色有几种写法<br>1.一些特殊的颜色可以直接用颜色名表示，比如：red,blue,black,yellow等<br>2.16进制表示法，如＃ff0000,ff代表红色，00代表绿色，00代表蓝色<br>3.rgb(255,0,0)<br>4.rgb(100%,0,0)</p>
-<p>三.DOCTYPE html的作用是什么<br>声明文档的解析类型，避免浏览器的怪异模式。如果你的页面没有DOCTYPE的声明，浏览器按照自己的方式解析渲染页面，那么，在不同的浏览器就会显示不同的样式。 如果你的页面添加了<code>&lt;!DOCTYPE html&gt;</code>那么浏览器按照W3C的标准解析渲染页面，这样一来，你的页面在所有的浏览器里显示的就都是一个样子了。</p>
-<p>四.严格模式和混杂模式指什么<br>当Netscape4和IE4实现CSS机制时，并没有遵循W3C提出的标准。随着标准一致性变得越来越重要，浏览器开发商不得不面临一个艰难的抉择：逐渐遵循W3C的标准是前进的方向。但是改变现有CSS的实现，完整去遵循标准，会使许多网站或多或少受到破坏。<br>解决办法：所有的浏览器需要提供两种模式：混杂模式服务于旧式规则，严格模式服务于标准规则。DOCTYPE正是用来告诉浏览器使用哪种DTD(文档类型定义)。<br>1.没有DOCTYPE’意味着触发混杂模式<br>2.大部分的/新的/未知的DOCTYPE声明将触发严格模式<br>3.一些页面依据混杂模式而写，但是却包含DOCTYPE。这种情况下各个浏览器依据自己的DOCTYPE规则列表来触发混杂模式。</p>
-<p>五.meta 有什么作用，常见的值有哪些<br>meta可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词，定义页面的使用语言，自动刷新并指向新的页面。</p>
-<p>meta标签共有两个属性，它们分别是http-equiv属性和name属性。<br>1、name属性<br>　　name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。<br>　　meta标签的name属性语法格式是：＜meta name=“参数” content=”具体的参数值”＞ 。<br>　　其中name属性主要有以下几种参数：<br>　　A、Keywords(关键字)，用来告诉搜索引擎你网页的关键字是什么。<br>　　B、description(网站内容描述)，用来告诉搜索引擎你的网站主要内容。<br>　　C、robots(机器人向导)，用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。<br>　　D、author(作者)，标注网页的作者<br>2、http-equiv属性<br>　　http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。<br>　　meta标签的http-equiv属性语法格式是：＜meta http-equiv=“参数” content=”参数变量值”＞ ；其中http-equiv属性主要有以下几种参数：<br>　　A、Expires(期限)，可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。<br>　　B、Pragma(cache模式)，禁止浏览器从本地计算机的缓存中访问页面内容。<br>　　C、Refresh(刷新)，自动刷新并指向新页面。<br>　　D、Set-Cookie(cookie设定)，如果网页过期，那么存盘的cookie将被删除。<br>　　E、content-Type(显示字符集的设定)，设定页面使用的字符集。<br>　　用法：＜meta http-equiv=“content-Type” content=”text/html; charset=gb2312”＞</p>
-<p>六.常见的浏览器有哪些，什么内核<br>IE 使用 Trident 引擎，闭源，只有微软的 IE 在使用，目前市场占有率世界第一。<br>Firefox 使用 Gecko 引擎，跨平台，就是以前的 Netscape 使用的 Mozilla 引擎，Netscape 倒了以后，成立了 Mozilla 基金会，将这个引擎完全重写，开源，市场占有率达到了第二。<br>Safari/chrome使用的引擎是苹果公司根据 KHTML 修改来的 WebKit，闭源，IPhone 上的浏览器也是用这个引擎。<br>Opera 的引擎是 Presto，闭源，也是跨平台的，速度也很快，原先的老二。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/06/23/继承/" title="继承" itemprop="url">继承</a>
@@ -153,9 +97,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h3 id="1-继承有什么作用"><a href="#1-继承有什么作用" class="headerlink" title="1.继承有什么作用?"></a>1.继承有什么作用?</h3><p>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-继承有什么作用"><span class="toc-number">1.</span> <span class="toc-text">1.继承有什么作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-有几种常见创建对象的方式-举例说明"><span class="toc-number">2.</span> <span class="toc-text">2.有几种常见创建对象的方式? 举例说明?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-下面两种写法有什么区别"><span class="toc-number">3.</span> <span class="toc-text">3.下面两种写法有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Object-create-有什么作用？兼容性如何？如何使用？"><span class="toc-number">4.</span> <span class="toc-text">4.Object.create 有什么作用？兼容性如何？如何使用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-hasOwnProperty有什么作用？-如何使用？"><span class="toc-number">5.</span> <span class="toc-text">5.hasOwnProperty有什么作用？ 如何使用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-实现Object-create的-polyfill"><span class="toc-number">6.</span> <span class="toc-text">6.实现Object.create的 polyfill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-如下代码中call的作用是什么"><span class="toc-number">7.</span> <span class="toc-text">7.如下代码中call的作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-补全代码，实现继承"><span class="toc-number">8.</span> <span class="toc-text">8.补全代码，实现继承</span></a></li></ol>
+		
+		</div>
+		
+		<h3 id="1-继承有什么作用"><a href="#1-继承有什么作用" class="headerlink" title="1.继承有什么作用?"></a>1.继承有什么作用?</h3><p>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
 <h3 id="2-有几种常见创建对象的方式-举例说明"><a href="#2-有几种常见创建对象的方式-举例说明" class="headerlink" title="2.有几种常见创建对象的方式? 举例说明?"></a>2.有几种常见创建对象的方式? 举例说明?</h3><p>&#160; &#160; &#160; &#160;1.对象字面量，无法传参</p>
 <pre><code>var person={
        name:&apos;simple&apos;,
@@ -380,14 +331,9 @@ Male.prototype.printName=function(){
 
 var simple = new Male(‘简单’, &apos;男&apos;, 27);
 simple.printName();
-</code></pre>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -405,82 +351,51 @@ simple.printName();
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://yoursite.com/2016/06/23/继承/" data-title="继承 | pingtingpeng&#39;s blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/23/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="pingtingpeng" target="_blank" itemprop="author">pingtingpeng</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-23T04:09:11.000Z" itemprop="datePublished"> 发表于 2016-06-23</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/06/25/html基础1/" title="html基础(问答一)">
+  <strong>上一篇：</strong><br/>
+  <span>
+  html基础(问答一)</span>
+</a>
 </div>
 
-</footer>
 
-
-    </article>
-
-
-
-
-
-
-
+<div class="next">
+<a href="/2016/06/23/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
 </div>
+
+</nav>
+
+	
+
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-继承有什么作用"><span class="toc-number">1.</span> <span class="toc-text">1.继承有什么作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-有几种常见创建对象的方式-举例说明"><span class="toc-number">2.</span> <span class="toc-text">2.有几种常见创建对象的方式? 举例说明?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-下面两种写法有什么区别"><span class="toc-number">3.</span> <span class="toc-text">3.下面两种写法有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Object-create-有什么作用？兼容性如何？如何使用？"><span class="toc-number">4.</span> <span class="toc-text">4.Object.create 有什么作用？兼容性如何？如何使用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-hasOwnProperty有什么作用？-如何使用？"><span class="toc-number">5.</span> <span class="toc-text">5.hasOwnProperty有什么作用？ 如何使用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-实现Object-create的-polyfill"><span class="toc-number">6.</span> <span class="toc-text">6.实现Object.create的 polyfill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-如下代码中call的作用是什么"><span class="toc-number">7.</span> <span class="toc-text">7.如下代码中call的作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-补全代码，实现继承"><span class="toc-number">8.</span> <span class="toc-text">8.补全代码，实现继承</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -633,12 +548,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -709,5 +701,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
->>>>>>> 5790625f38b264d12b18aa38d8e1ee2f188b5cee
+</html>
