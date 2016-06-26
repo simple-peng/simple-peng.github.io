@@ -1,0 +1,453 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>html基础(问答一) | pingtingpeng&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="pingtingpeng">
+    
+
+    
+    <meta name="description" content="一.网页乱码是如何产生的UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html基础(问答一)">
+<meta property="og:url" content="http://yoursite.com/2016/06/25/html基础1/index.html">
+<meta property="og:site_name" content="pingtingpeng's blog">
+<meta property="og:description" content="一.网页乱码是如何产生的UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他">
+<meta property="og:updated_time" content="2016-06-25T11:30:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html基础(问答一)">
+<meta name="twitter:description" content="一.网页乱码是如何产生的UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他">
+
+    
+    <link rel="alternative" href="/atom.xml" title="pingtingpeng&#39;s blog" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="pingtingpeng&#39;s blog">pingtingpeng&#39;s blog</a></h1>
+				<h2 class="blog-motto">persistence will change your life</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/06/25/html基础1/" title="html基础(问答一)" itemprop="url">html基础(问答一)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="pingtingpeng" target="_blank" itemprop="author">pingtingpeng</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-25T02:57:28.000Z" itemprop="datePublished"> 发表于 2016-06-25</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>一.网页乱码是如何产生的<br>UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。<br>乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他国家的语言了，这时候需要在html里加<code>&lt;meta charset=“gbk”&gt;</code>指定浏览器的解码方式为gbk。</p>
+<p>二.颜色有几种写法<br>1.一些特殊的颜色可以直接用颜色名表示，比如：red,blue,black,yellow等<br>2.16进制表示法，如＃ff0000,ff代表红色，00代表绿色，00代表蓝色<br>3.rgb(255,0,0)<br>4.rgb(100%,0,0)</p>
+<p>三.DOCTYPE html的作用是什么<br>声明文档的解析类型，避免浏览器的怪异模式。如果你的页面没有DOCTYPE的声明，浏览器按照自己的方式解析渲染页面，那么，在不同的浏览器就会显示不同的样式。 如果你的页面添加了<code>&lt;!DOCTYPE html&gt;</code>那么浏览器按照W3C的标准解析渲染页面，这样一来，你的页面在所有的浏览器里显示的就都是一个样子了。</p>
+<p>四.严格模式和混杂模式指什么<br>当Netscape4和IE4实现CSS机制时，并没有遵循W3C提出的标准。随着标准一致性变得越来越重要，浏览器开发商不得不面临一个艰难的抉择：逐渐遵循W3C的标准是前进的方向。但是改变现有CSS的实现，完整去遵循标准，会使许多网站或多或少受到破坏。<br>解决办法：所有的浏览器需要提供两种模式：混杂模式服务于旧式规则，严格模式服务于标准规则。DOCTYPE正是用来告诉浏览器使用哪种DTD(文档类型定义)。<br>1.没有DOCTYPE’意味着触发混杂模式<br>2.大部分的/新的/未知的DOCTYPE声明将触发严格模式<br>3.一些页面依据混杂模式而写，但是却包含DOCTYPE。这种情况下各个浏览器依据自己的DOCTYPE规则列表来触发混杂模式。</p>
+<p>五.meta 有什么作用，常见的值有哪些<br>meta可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词，定义页面的使用语言，自动刷新并指向新的页面。</p>
+<p>meta标签共有两个属性，它们分别是http-equiv属性和name属性。<br>1、name属性<br>　　name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。<br>　　meta标签的name属性语法格式是：＜meta name=“参数” content=”具体的参数值”＞ 。<br>　　其中name属性主要有以下几种参数：<br>　　A、Keywords(关键字)，用来告诉搜索引擎你网页的关键字是什么。<br>　　B、description(网站内容描述)，用来告诉搜索引擎你的网站主要内容。<br>　　C、robots(机器人向导)，用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。<br>　　D、author(作者)，标注网页的作者<br>2、http-equiv属性<br>　　http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。<br>　　meta标签的http-equiv属性语法格式是：＜meta http-equiv=“参数” content=”参数变量值”＞ ；其中http-equiv属性主要有以下几种参数：<br>　　A、Expires(期限)，可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。<br>　　B、Pragma(cache模式)，禁止浏览器从本地计算机的缓存中访问页面内容。<br>　　C、Refresh(刷新)，自动刷新并指向新页面。<br>　　D、Set-Cookie(cookie设定)，如果网页过期，那么存盘的cookie将被删除。<br>　　E、content-Type(显示字符集的设定)，设定页面使用的字符集。<br>　　用法：＜meta http-equiv=“content-Type” content=”text/html; charset=gb2312”＞</p>
+<p>六.常见的浏览器有哪些，什么内核<br>IE 使用 Trident 引擎，闭源，只有微软的 IE 在使用，目前市场占有率世界第一。<br>Firefox 使用 Gecko 引擎，跨平台，就是以前的 Netscape 使用的 Mozilla 引擎，Netscape 倒了以后，成立了 Mozilla 基金会，将这个引擎完全重写，开源，市场占有率达到了第二。<br>Safari/chrome使用的引擎是苹果公司根据 KHTML 修改来的 WebKit，闭源，IPhone 上的浏览器也是用这个引擎。<br>Opera 的引擎是 Presto，闭源，也是跨平台的，速度也很快，原先的老二。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/06/25/html基础1/" data-title="html基础(问答一) | pingtingpeng&#39;s blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/06/23/继承/"  title="继承">
+ <strong>下一篇：</strong><br/> 
+ <span>继承
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/study-summary/" title="study&amp;summary">study&amp;summary<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/对象/" title="对象">对象<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="simple-peng.github.io/home" target="_blank" title="pingtingpeng&#39;s Website">pingtingpeng&#39;s Website</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m pingting Peng in Hz. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="pingtingpeng">pingtingpeng</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
