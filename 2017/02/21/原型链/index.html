@@ -4,23 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>利用负margin进行常见布局 | pingtingpeng&#39;s blog</title>
+    <title>原型链 | pingtingpeng&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="pingtingpeng">
     
 
     
-    <meta name="description" content="1.怎样使用负margin形成三栏布局呢？&amp;#160; &amp;#160; &amp;#160; &amp;#160;中间main设置为100%浮动，左右两侧aside也要设为浮动宽度定好，选用合适方式清除浮动；&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个aside使用负margin(一个为-100%，一个为-“自身宽度”)分布到main左右两侧；&amp;#160; &amp;#160; &amp;#160; &amp;#160;若为">
+    <meta name="description" content="title: 原型链date: 2017-02-20 15:35:09
+tags:&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天被问到这样一个问题：求以下输出
+  function Thing1(){  this.foo = ‘foo’;}Thing1.prototype.foo = ‘bar’;
+function Thing2(){  this.logFoo();//‘bar’">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用负margin进行常见布局">
-<meta property="og:url" content="http://yoursite.com/2016/06/27/利用负margin进行常见布局/index.html">
+<meta property="og:title" content="原型链">
+<meta property="og:url" content="http://yoursite.com/2017/02/21/原型链/index.html">
 <meta property="og:site_name" content="pingtingpeng's blog">
-<meta property="og:description" content="1.怎样使用负margin形成三栏布局呢？&amp;#160; &amp;#160; &amp;#160; &amp;#160;中间main设置为100%浮动，左右两侧aside也要设为浮动宽度定好，选用合适方式清除浮动；&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个aside使用负margin(一个为-100%，一个为-“自身宽度”)分布到main左右两侧；&amp;#160; &amp;#160; &amp;#160; &amp;#160;若为">
-<meta property="og:updated_time" content="2016-06-27T05:35:28.000Z">
+<meta property="og:description" content="title: 原型链date: 2017-02-20 15:35:09
+tags:&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天被问到这样一个问题：求以下输出
+  function Thing1(){  this.foo = ‘foo’;}Thing1.prototype.foo = ‘bar’;
+function Thing2(){  this.logFoo();//‘bar’">
+<meta property="og:updated_time" content="2017-02-21T12:49:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用负margin进行常见布局">
-<meta name="twitter:description" content="1.怎样使用负margin形成三栏布局呢？&amp;#160; &amp;#160; &amp;#160; &amp;#160;中间main设置为100%浮动，左右两侧aside也要设为浮动宽度定好，选用合适方式清除浮动；&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个aside使用负margin(一个为-100%，一个为-“自身宽度”)分布到main左右两侧；&amp;#160; &amp;#160; &amp;#160; &amp;#160;若为">
+<meta name="twitter:title" content="原型链">
+<meta name="twitter:description" content="title: 原型链date: 2017-02-20 15:35:09
+tags:&amp;#160; &amp;#160; &amp;#160; &amp;#160;今天被问到这样一个问题：求以下输出
+  function Thing1(){  this.foo = ‘foo’;}Thing1.prototype.foo = ‘bar’;
+function Thing2(){  this.logFoo();//‘bar’">
 
     
     <link rel="alternative" href="/atom.xml" title="pingtingpeng&#39;s blog" type="application/atom+xml">
@@ -71,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/27/利用负margin进行常见布局/" title="利用负margin进行常见布局" itemprop="url">利用负margin进行常见布局</a>
+      <a href="/2017/02/21/原型链/" title="原型链" itemprop="url">原型链</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="pingtingpeng" target="_blank" itemprop="author">pingtingpeng</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-26T17:04:09.000Z" itemprop="datePublished"> 发表于 2016-06-27</time>
+    <time datetime="2017-02-21T07:12:31.000Z" itemprop="datePublished"> 发表于 2017-02-21</time>
     
   </p>
 </header>
@@ -87,13 +96,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-怎样使用负margin形成三栏布局呢？"><span class="toc-number">1.</span> <span class="toc-text">1.怎样使用负margin形成三栏布局呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-圣杯布局的原理是怎样的-简述实现圣杯布局的步骤"><span class="toc-number">2.</span> <span class="toc-text">2.圣杯布局的原理是怎样的?简述实现圣杯布局的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-双飞翼布局的原理-实现步骤"><span class="toc-number">3.</span> <span class="toc-text">3.双飞翼布局的原理? 实现步骤?</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags"><span class="toc-number">1.</span> <span class="toc-text">tags:</span></a></li></ol>
 		
 		</div>
 		
-		<h3 id="1-怎样使用负margin形成三栏布局呢？"><a href="#1-怎样使用负margin形成三栏布局呢？" class="headerlink" title="1.怎样使用负margin形成三栏布局呢？"></a>1.怎样使用负margin形成三栏布局呢？</h3><p>&#160; &#160; &#160; &#160;中间main设置为100%浮动，左右两侧aside也要设为浮动宽度定好，选用合适方式清除浮动；<br>&#160; &#160; &#160; &#160;两个aside使用负margin(一个为-100%，一个为-“自身宽度”)分布到main左右两侧；<br>&#160; &#160; &#160; &#160;若为圣杯三栏，则在父容器上左右padding预留两个aside区，并利用相对偏移使两aside移至padding的空白区域<br>&#160; &#160; &#160; &#160;若为双飞翼三栏，则在main区块上再内嵌一个div作为真正的中间主体部分，然后再左右margin此div到合适位置。</p>
-<h3 id="2-圣杯布局的原理是怎样的-简述实现圣杯布局的步骤"><a href="#2-圣杯布局的原理是怎样的-简述实现圣杯布局的步骤" class="headerlink" title="2.圣杯布局的原理是怎样的?简述实现圣杯布局的步骤"></a>2.圣杯布局的原理是怎样的?简述实现圣杯布局的步骤</h3><p>&#160; &#160; &#160; &#160;圣杯布局的原理是利用负margin让两个浮动的固定宽度盒子进入到一个同样是浮动且自适应宽度的盒子里面去，再用相对偏移做调整。<br>&#160; &#160; &#160; &#160;步骤一：设置宽度为自适应的box main浮动，清除box浮动；<br>&#160; &#160; &#160; &#160;步骤二：设置两个固定宽度的box aside1、aside2浮动，利用负margin把它们移动到main的左右两侧；<br>&#160; &#160; &#160; &#160;步骤三：在父容器上左右padding预留两个aside区，用相对偏移让aside1、aside2微调整至padding的空白区域。</p>
-<h3 id="3-双飞翼布局的原理-实现步骤"><a href="#3-双飞翼布局的原理-实现步骤" class="headerlink" title="3.双飞翼布局的原理? 实现步骤?"></a>3.双飞翼布局的原理? 实现步骤?</h3><p>&#160; &#160; &#160; &#160;双飞翼布局的原理是利用负margin让两个浮动的固定宽度盒子进入到一个同样是浮动且自适应宽度的盒子里面去，再内嵌一个div做真正的主内容区块。<br>&#160; &#160; &#160; &#160;步骤一：设置宽度为自适应的box main浮动，清除box浮动；<br>&#160; &#160; &#160; &#160;步骤二：设置两个固定宽度的box aside1、aside2浮动，利用负margin把它们移动到main的左右两侧；<br>&#160; &#160; &#160; &#160;步骤三：在main区块内再内嵌一个div作为真实的主内容，并为此div设置左右margin。</p>
+		<hr>
+<p>title: 原型链<br>date: 2017-02-20 15:35:09</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>&#160; &#160; &#160; &#160;今天被问到这样一个问题：求以下输出</p>
+<p><pre><code><br>  function Thing1(){<br>  this.foo = ‘foo’;<br>}<br>Thing1.prototype.foo = ‘bar’;</code></pre></p>
+<p>function Thing2(){<br>  this.logFoo();//‘bar’<br>  console.log(this);<br>  Thing1.apply(this);<br>  console.log(this);<br>  this.logFoo();//‘foo’<br>}</p>
+<p>Thing2.prototype = Object.create(Thing1.prototype);<br>Thing2.prototype.logFoo = function(){<br>  console.log(this.foo);<br>}<br>var thing = new Thing2();<br><br>&#160; &#160; &#160; &#160;在回答这个问题之前，先来回顾一下类(Javascript语言不支持”类”，但是可以用一些变通的方法，模拟出”类”)、实例、prototype、<strong>proto</strong>的关系</p>
+<p><pre><code><br>function Person(name,age){<br>  this.name = name;<br>  this.age = age;<br>}<br>Person.prototype.sayName = function(){<br>  console.log(this.name);<br>}<br>var p1 = new Person();<br>p1.sayName();<br></code></pre><br><a href="/Person原型图.png"></a><br>&#160; &#160; &#160; &#160;1.我们通过函数定义了类Person,类(函数)自动获得属性prototype<br>&#160; &#160; &#160; &#160;2.每个类的实例都会有一个内部属性<strong>proto</strong>,指向类的prototype属性</p>
+<p>&#160; &#160; &#160; &#160;理解了这一点我们就可以大概理解thing和Thing2的关系,</p>
+<p>&#160; &#160; &#160; &#160;接着来说下<code>Object.create</code>函数和<code>.apply</code>的作用:<br>&#160; &#160; &#160; &#160;1.Object.create() 方法创建一个拥有指定原型和若干个指定属性的对象。<br>&#160; &#160; &#160; &#160;语法：<code>Object.create(proto, {propertiesObject})</code><br>&#160; &#160; &#160; &#160;<code>proto</code>是指一个对象，作为新创建对象的原型，或者也可以是null值<br>&#160; &#160; &#160; &#160;<code>propertiesObject</code>:可选，该参数对象是一组属性与值，该对象的属性名称将是新创建对象的属性名称，值是属性描述符，例如如果：</p>
+<p><pre><code><br>Thing2.prototype = Object.create(Thing1.prototype,{<br>foo: {value: ‘hello’,writable: true,configurable:true},<br>bar:{configurable:false,get:function(){return 10},set:function(value){console.log(“Setting <code>o.bar</code> to”, value}}});<br></code></pre><br>&#160; &#160; &#160; &#160;那么Thing2.prototype.foo的值就为’hello’,foo将成为新创建对象的数据属性，bar将成为新创建对象的访问器属性<br>&#160; &#160; &#160; &#160;<br>&#160; &#160; &#160; &#160;上题中的Thing2.prototype = Object.create(Thing1.prototype)，把Thing1.prototype赋给Thing2.prototype，也即<br>创建了一个指定原型的对象，并把这个对象赋值给了Thing2.prototype，这里并没有指定属性，于是我们可以得到下图<br><a href="/apply原型图.png"></a><br>&#160; &#160; &#160; &#160;此时Thing2上没有foo属性，便去原型上找，找到了，为bar,因此第一个输出为bar<br>&#160; &#160; &#160; &#160;2.<code>.apply</code>和<code>.call</code>均可以用于改变当前对象的作用域<br>&#160; &#160; &#160; &#160;<code>apply</code>:<code>fun.apply(thisArg[, argsArray])</code><br>&#160; &#160; &#160; &#160;<code>thisArg</code>:在fun函数运行时指定的this值。需要注意的是，如果函数处于非严格模式下，指定为null或undefined会自动指向全局对象（浏览器中就是window对象），同时值为原始值<br>（数字，字符串，布尔值）的this会指向该原始值的自动包装对象。<br>&#160; &#160; &#160; &#160;<code>argsArray</code>:一个数组或者类数组对象。如果该数组的值为null或undefined,则表示不需要传入任何参数<br>&#160; &#160; &#160; &#160;例如：Math.max.apply(null,[1,2])//或者Math.max(…[1,2]) es6写法<br>&#160; &#160; &#160; &#160;Math.max.call(null,1,2)<br>&#160; &#160; &#160; &#160;apply 与 call() 非常相似，不同之处在于提供参数的方式。apply使用数组，call使用参数列表</p>
+<p><pre><code><br>function Thing2(){<br>console.log(this);<br>  Thing1.apply(this);<br>}<br></code></pre><br>&#160; &#160; &#160; &#160;上述代码的apply相当于Thing2调用Thing1的constructor,于是在自身上生成了foo为’foo’的属性，于是第二次输出‘foo’</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -106,7 +123,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/27/利用负margin进行常见布局/" data-title="利用负margin进行常见布局 | pingtingpeng&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/02/21/原型链/" data-title="原型链 | pingtingpeng&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -119,19 +136,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/27/同源策略相关问答/" title="同源策略相关问答">
-  <strong>上一篇：</strong><br/>
-  <span>
-  同源策略相关问答</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/06/25/html基础1/"  title="html基础(问答一)">
+<a href="/2016/06/27/同源策略相关问答/"  title="同源策略相关问答">
  <strong>下一篇：</strong><br/> 
- <span>html基础(问答一)
+ <span>同源策略相关问答
 </span>
 </a>
 </div>
@@ -146,7 +155,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-怎样使用负margin形成三栏布局呢？"><span class="toc-number">1.</span> <span class="toc-text">1.怎样使用负margin形成三栏布局呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-圣杯布局的原理是怎样的-简述实现圣杯布局的步骤"><span class="toc-number">2.</span> <span class="toc-text">2.圣杯布局的原理是怎样的?简述实现圣杯布局的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-双飞翼布局的原理-实现步骤"><span class="toc-number">3.</span> <span class="toc-text">3.双飞翼布局的原理? 实现步骤?</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags"><span class="toc-number">1.</span> <span class="toc-text">tags:</span></a></li></ol>
  
   </div>
 
