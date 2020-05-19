@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pingtingpeng&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/对象/index.html">
+<meta name="description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;在javascript中运算符通常会根据操作的数据进行类型转换，比如+:&amp;#160; &amp;#160; &amp;#160; &amp;#160;在两个操作数都是数字的时候，会做加法运算&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个参数都是字符串或在有一个参数是字符串的情况下会把另外一个参数转换为字符串做字符串拼接&amp;#160; &amp;#160; &amp;#160">
+<meta property="og:type" content="article">
+<meta property="og:title" content="toString与valueOf研究">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/toString与valueOf研究-md/index.html">
 <meta property="og:site_name" content="pingtingpeng&#39;s blog">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;在javascript中运算符通常会根据操作的数据进行类型转换，比如+:&amp;#160; &amp;#160; &amp;#160; &amp;#160;在两个操作数都是数字的时候，会做加法运算&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个参数都是字符串或在有一个参数是字符串的情况下会把另外一个参数转换为字符串做字符串拼接&amp;#160; &amp;#160; &amp;#160">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-19T05:24:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pingtingpeng&#39;s blog">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="toString与valueOf研究">
+<meta name="twitter:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;在javascript中运算符通常会根据操作的数据进行类型转换，比如+:&amp;#160; &amp;#160; &amp;#160; &amp;#160;在两个操作数都是数字的时候，会做加法运算&amp;#160; &amp;#160; &amp;#160; &amp;#160;两个参数都是字符串或在有一个参数是字符串的情况下会把另外一个参数转换为字符串做字符串拼接&amp;#160; &amp;#160; &amp;#160">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/对象/">
+  <link rel="canonical" href="http://yoursite.com/2017/07/07/toString与valueOf研究-md/">
 
 
 
 
 
-  <title>Tag: 对象 | pingtingpeng's blog</title>
+  <title>toString与valueOf研究 | pingtingpeng's blog</title>
   
 
 
@@ -143,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,52 +218,141 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>对象<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/toString与valueOf研究-md/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/06/23/继承/" itemprop="url">
-              
-                <span itemprop="name">继承</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">toString与valueOf研究</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-06-23T17:26:57+08:00" content="2016-06-23">
-          06-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-07T16:32:46+08:00">
+                2017-07-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#160; &#160; &#160; &#160;在javascript中运算符通常会根据操作的数据进行类型转换，比如<code>+</code>:<br>&#160; &#160; &#160; &#160;在两个操作数都是数字的时候，会做加法运算<br>&#160; &#160; &#160; &#160;两个参数都是字符串或在有一个参数是字符串的情况下会把另外一个参数转换为字符串做字符串拼接<br>&#160; &#160; &#160; &#160;在参数有对象的情况下会调用其valueOf或toString<br>&#160; &#160; &#160; &#160;在只有一个字符串参数的时候会尝试将其转换为数字<br>&#160; &#160; &#160; &#160;在只有一个数字参数的时候返回其正数值<br>&#160; &#160; &#160; &#160;以上为常遇到的隐式转换情景。那么在有对象的情况下究竟什么时候调用valueOf什么时候调用toString？<br>&#160; &#160; &#160; &#160;一.通过一系列实验，基本上,在两个方法没有被重写的前提下<br>&#160; &#160; &#160; &#160;1.遇到字符串拼接时调用toString,比如‘1’+obj<br>&#160; &#160; &#160; &#160;2.只有操作符和obj调用valueOf,比如+obj<br>&#160; &#160; &#160; &#160;二.只重写toString，对象转换用toString，无视valueOf<br>&#160; &#160; &#160; &#160;三.只重写valueOf，对象转换用toString，优先调用valueOf，无法调用valueOf时才调用toString<br>&#160; &#160; &#160; &#160;（代码后续更新..）</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/07/toString与valueOf研究/" rel="next" title="toString与valueOf研究">
+                <i class="fa fa-chevron-left"></i> toString与valueOf研究
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -270,6 +360,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -306,7 +400,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -484,6 +578,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
