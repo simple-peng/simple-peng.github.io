@@ -1,461 +1,680 @@
+<!DOCTYPE html>
 
- <!DOCTYPE HTML>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
+
+
   
-    <title>同源策略相关问答 | pingtingpeng&#39;s blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="pingtingpeng">
-    
 
-    
-    <meta name="description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。
-二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。 二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="同源策略相关问答">
 <meta property="og:url" content="http://yoursite.com/2016/06/27/同源策略相关问答/index.html">
-<meta property="og:site_name" content="pingtingpeng's blog">
-<meta property="og:description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。
-二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
+<meta property="og:site_name" content="pingtingpeng&#39;s blog">
+<meta property="og:description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。 二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2016-06-27T07:34:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同源策略相关问答">
-<meta name="twitter:description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。
-二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
+<meta name="twitter:description" content="一.什么是同源策略&amp;#160; &amp;#160; &amp;#160; &amp;#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。 二.什么是跨域？跨域有几种实现形式&amp;#160; &amp;#160; &amp;#160; &amp;#160;同源策略不允许跨域调用其他页面的对象">
 
-    
-    <link rel="alternative" href="/atom.xml" title="pingtingpeng&#39;s blog" type="application/atom+xml">
-    
-    
-    
-    <link rel="stylesheet" href="/css/style.css">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/27/同源策略相关问答/">
+
+
+
+
+
+  <title>同源策略相关问答 | pingtingpeng's blog</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
-  <body>
-    <header>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">pingtingpeng's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
       
-<div>
-		
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="pingtingpeng&#39;s blog">pingtingpeng&#39;s blog</a></h1>
-				<h2 class="blog-motto">work hard on developing myself</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-  
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/27/同源策略相关问答/" title="同源策略相关问答" itemprop="url">同源策略相关问答</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="pingtingpeng" target="_blank" itemprop="author">pingtingpeng</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-27T02:39:01.000Z" itemprop="datePublished"> 发表于 2016-06-27</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-什么是同源策略"><span class="toc-number">1.</span> <span class="toc-text">一.什么是同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-什么是跨域？跨域有几种实现形式"><span class="toc-number">2.</span> <span class="toc-text">二.什么是跨域？跨域有几种实现形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-jsonp-的原理是什么"><span class="toc-number">3.</span> <span class="toc-text">三.jsonp 的原理是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-CORS是什么"><span class="toc-number">4.</span> <span class="toc-text">四.CORS是什么</span></a></li></ol>
-		
-		</div>
-		
-		<h3 id="一-什么是同源策略"><a href="#一-什么是同源策略" class="headerlink" title="一.什么是同源策略"></a>一.什么是同源策略</h3><p>&#160; &#160; &#160; &#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；<br>&#160; &#160; &#160; &#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。</p>
-<h3 id="二-什么是跨域？跨域有几种实现形式"><a href="#二-什么是跨域？跨域有几种实现形式" class="headerlink" title="二.什么是跨域？跨域有几种实现形式"></a>二.什么是跨域？跨域有几种实现形式</h3><p>&#160; &#160; &#160; &#160;同源策略不允许跨域调用其他页面的对象，保证了web安全，但是也给网站间的数据交互带来不便，为了解决这一问题，跨域出现了，跨域是指不同域下的客户端脚本可以突破同源策略的限制,彼此之间可以进行数据交互，它有以下几种实现形式：<br>&#160; &#160; &#160; &#160;1.降域:<code>让不同源变为同源</code><br>&#160; &#160; &#160; &#160;具体的做法是可以在<code>http://www.a.com/a.html</code>和<code>http://script.a.com/b.html</code>两个文件中分别加上<code>document.domain = &#39;a.com&#39;</code>,将各自域名降为a.com<br>&#160; &#160; &#160; &#160;这种方法用得较少，因为会带来大面积的安全问题，因为它降域了，所以可以访问所有其他任何主域名相同的网站的信息，它的适用场景还局限于1.只适用于主域名相同而子域名不同的情况，2.只对拥有Src属性的标签有用<br>&#160; &#160; &#160; &#160;2.<code>jsonp</code>：利用了可以引用不同域下js的特性，比如a.com去请求b.com中的数据内容，首先会在客户端与服务器之间约定好一个函数名，然后创建一个动态script,script的src后附上约定好的函数名=xxx，b中收到请求会返回xxx({数据内容})，而xxx在a.com中是一个函数，会立即执行，b中数据被当作参数传入a中。<br>&#160; &#160; &#160; &#160;问题：<br>&#160; &#160; &#160; &#160;a.安全性问题，任何第三方网站拷贝a中js代码都可以拿到b中数据，解决办法:额外的身份校验，比如<br><code>&lt;script src=&#39;data.js?callback=xxx&amp;token=&#39;+cookie</code><br>其中var cookie=’a.com下的cookie’,因为c.com下的网页拿不到a.com下的cookie,让a、b共用一套cookie体系<br>&#160; &#160; &#160; &#160;b.不能post，只能get请求<br>&#160; &#160; &#160; &#160;c.可被注入(callback=alert(1);),比如浏览器中输入<code>b.com/data.js?call2=alert(1);</code>,会输出<code>alert(1);({&quot;name&quot;:&quot;frank&quot;,&quot;age&quot;:15})</code>解决办法:字符串过滤，比如只允许出现jQuery 1234567890之外的字符，不允许出现括号(replace)<br>&#160; &#160; &#160; &#160;3.<code>cors</code>:跨域资源共享，顾名思义它可以让服务器暴露给其它域上文件的Ajax用XMLHttpRequest调用，分为简单请求和非简单请求，具体的实现是客户端先发送一个CORS请求，服务器根据这个请求的源决定是否允许，然后在服务器端set Access-Control-Allow-Origin:源，从而返回给客户端数据。它是h5的新特性，因而不支持ie6,7,8,在ie9,10上也有问题。<br>&#160; &#160; &#160; &#160;4.[HTML5]postMessage:在请求域的文件下添加<code>windowobj.postMessage(message,targetOrigin)</code>,然后接受请求的域的文件里会有一个message的事件来监听postMessage判断消息来源地址，如果是允许的源发来的数据就可以做处理。<br>&#160; &#160; &#160; &#160;5.location.hash<br>&#160; &#160; &#160; &#160;6.window.name:利用了window.name不随域名变化而变化，只随tab页面的开启关闭而变化这一特性，比如a.com和b.com要交换数据，首先在a页面添加一个iframe,iframe指向a.com下的代理1页面，在代理1页面完成两件事，将window.name=a传给b的参数，再将域名切换到b.com，b通过window.name得到a传过来的信息，对这一信息加以处理后赋值给window.name,再切到a.com下的代理2页面，代理2页面读取window.name，并将它交给父window(a页面，iframe的父节点)的函数去处理，这时候事先定义好的函数就拿到了实参，可以该干嘛干嘛了。<br><a href="http://leanote.com/api/file/getAttach?fileId=5767ae6cab64415d8b0072c8" target="_blank" rel="external">降域演示.mov</a><br><a href="https://github.com/jirengu-inc/jrg-renwu3/tree/master/homework/%E5%BD%AD%E5%A8%89%E5%A9%B7/lv31-%E9%99%8D%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81" target="_blank" rel="external">降域演示代码</a></p>
-<h3 id="三-jsonp-的原理是什么"><a href="#三-jsonp-的原理是什么" class="headerlink" title="三.jsonp 的原理是什么"></a>三.jsonp 的原理是什么</h3><p>&#160; &#160; &#160; &#160;与上题类似，就是请求的a.com创建一个动态script，在src里加入一个在a.com中已被定义的一个函数的名字，然后服务端读到这个函数名后再加括号，括号里加参数(从数据库取到的数据，数据格式一般为json)的形式返回给a.com，这样a.com就以参数传递的形式拿到了b.com的数据。<br><a href="http://leanote.com/api/file/getAttach?fileId=5767ae6cab64415d8b0072c8" target="_blank" rel="external">模拟JSONP降域演示.mov</a><br><a href="https://github.com/jirengu-inc/jrg-renwu3/tree/master/homework/%E5%BD%AD%E5%A8%89%E5%A9%B7/lv31-%E9%99%8D%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81/jsonp%E8%B7%A8%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81" target="_blank" rel="external">具体代码</a></p>
-<h3 id="四-CORS是什么"><a href="#四-CORS是什么" class="headerlink" title="四.CORS是什么"></a>四.CORS是什么</h3><p>&#160; &#160; &#160; &#160;跨域资源共享，W3C标准，允许浏览器向服务器跨源的发出XMLHttpRequest请求，因为跨源，肯定需要添加一些额外的信息，其实就是一些请求头的设置，然后服务端根据你发出的这些额外信息判断我是否允许你的请求，如果我给你返回的头信息字段里有Access-Control-Allow-Origin就表示我允许了，可以返给你跨域的数据了。其他的aiax请求与同源请求无异，不支持ie6-10。</p>
-  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://yoursite.com/2016/06/27/同源策略相关问答/" data-title="同源策略相关问答 | pingtingpeng&#39;s blog" data-tsina="null" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2017/02/21/原型链/" title="原型链">
-  <strong>上一篇：</strong><br/>
-  <span>
-  原型链</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2016/06/27/利用负margin进行常见布局/"  title="利用负margin进行常见布局">
- <strong>下一篇：</strong><br/> 
- <span>利用负margin进行常见布局
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-什么是同源策略"><span class="toc-number">1.</span> <span class="toc-text">一.什么是同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-什么是跨域？跨域有几种实现形式"><span class="toc-number">2.</span> <span class="toc-text">二.什么是跨域？跨域有几种实现形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-jsonp-的原理是什么"><span class="toc-number">3.</span> <span class="toc-text">三.jsonp 的原理是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-CORS是什么"><span class="toc-number">4.</span> <span class="toc-text">四.CORS是什么</span></a></li></ol>
- 
+        <p class="site-subtitle"></p>
+      
   </div>
 
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
+<nav class="site-nav">
   
 
-
   
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/study-summary/" title="study&amp;summary">study&amp;summary<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/对象/" title="对象">对象<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="./cv.html" target="_blank" title="pingtingpeng&#39;s resume">pingtingpeng&#39;s resume</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m pingting Peng in Hz. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/ppvanish" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
-		
-		<a href="/about" target="_blank" title="pingtingpeng">pingtingpeng</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+    <ul id="menu" class="menu">
       
-      $('#toc.toc-aside').css('display', 'none');
         
-    }
-  });
-});
-</script>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/27/同源策略相关问答/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">同源策略相关问答</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-27T10:39:01+08:00">
+                2016-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一-什么是同源策略"><a href="#一-什么是同源策略" class="headerlink" title="一.什么是同源策略"></a>一.什么是同源策略</h3><p>&#160; &#160; &#160; &#160;什么是源：协议＋域名＋端口号，同源就是指这三者都相同；<br>&#160; &#160; &#160; &#160;同源策略：是浏览器的一个功能，即不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。</p>
+<h3 id="二-什么是跨域？跨域有几种实现形式"><a href="#二-什么是跨域？跨域有几种实现形式" class="headerlink" title="二.什么是跨域？跨域有几种实现形式"></a>二.什么是跨域？跨域有几种实现形式</h3><p>&#160; &#160; &#160; &#160;同源策略不允许跨域调用其他页面的对象，保证了web安全，但是也给网站间的数据交互带来不便，为了解决这一问题，跨域出现了，跨域是指不同域下的客户端脚本可以突破同源策略的限制,彼此之间可以进行数据交互，它有以下几种实现形式：<br>&#160; &#160; &#160; &#160;1.降域:<code>让不同源变为同源</code><br>&#160; &#160; &#160; &#160;具体的做法是可以在<code>http://www.a.com/a.html</code>和<code>http://script.a.com/b.html</code>两个文件中分别加上<code>document.domain = &#39;a.com&#39;</code>,将各自域名降为a.com<br>&#160; &#160; &#160; &#160;这种方法用得较少，因为会带来大面积的安全问题，因为它降域了，所以可以访问所有其他任何主域名相同的网站的信息，它的适用场景还局限于1.只适用于主域名相同而子域名不同的情况，2.只对拥有Src属性的标签有用<br>&#160; &#160; &#160; &#160;2.<code>jsonp</code>：利用了可以引用不同域下js的特性，比如a.com去请求b.com中的数据内容，首先会在客户端与服务器之间约定好一个函数名，然后创建一个动态script,script的src后附上约定好的函数名=xxx，b中收到请求会返回xxx({数据内容})，而xxx在a.com中是一个函数，会立即执行，b中数据被当作参数传入a中。<br>&#160; &#160; &#160; &#160;问题：<br>&#160; &#160; &#160; &#160;a.安全性问题，任何第三方网站拷贝a中js代码都可以拿到b中数据，解决办法:额外的身份校验，比如<br><code>&lt;script src=&#39;data.js?callback=xxx&amp;token=&#39;+cookie</code><br>其中var cookie=’a.com下的cookie’,因为c.com下的网页拿不到a.com下的cookie,让a、b共用一套cookie体系<br>&#160; &#160; &#160; &#160;b.不能post，只能get请求<br>&#160; &#160; &#160; &#160;c.可被注入(callback=alert(1);),比如浏览器中输入<code>b.com/data.js?call2=alert(1);</code>,会输出<code>alert(1);({&quot;name&quot;:&quot;frank&quot;,&quot;age&quot;:15})</code>解决办法:字符串过滤，比如只允许出现jQuery 1234567890之外的字符，不允许出现括号(replace)<br>&#160; &#160; &#160; &#160;3.<code>cors</code>:跨域资源共享，顾名思义它可以让服务器暴露给其它域上文件的Ajax用XMLHttpRequest调用，分为简单请求和非简单请求，具体的实现是客户端先发送一个CORS请求，服务器根据这个请求的源决定是否允许，然后在服务器端set Access-Control-Allow-Origin:源，从而返回给客户端数据。它是h5的新特性，因而不支持ie6,7,8,在ie9,10上也有问题。<br>&#160; &#160; &#160; &#160;4.[HTML5]postMessage:在请求域的文件下添加<code>windowobj.postMessage(message,targetOrigin)</code>,然后接受请求的域的文件里会有一个message的事件来监听postMessage判断消息来源地址，如果是允许的源发来的数据就可以做处理。<br>&#160; &#160; &#160; &#160;5.location.hash<br>&#160; &#160; &#160; &#160;6.window.name:利用了window.name不随域名变化而变化，只随tab页面的开启关闭而变化这一特性，比如a.com和b.com要交换数据，首先在a页面添加一个iframe,iframe指向a.com下的代理1页面，在代理1页面完成两件事，将window.name=a传给b的参数，再将域名切换到b.com，b通过window.name得到a传过来的信息，对这一信息加以处理后赋值给window.name,再切到a.com下的代理2页面，代理2页面读取window.name，并将它交给父window(a页面，iframe的父节点)的函数去处理，这时候事先定义好的函数就拿到了实参，可以该干嘛干嘛了。<br><a href="http://leanote.com/api/file/getAttach?fileId=5767ae6cab64415d8b0072c8" target="_blank" rel="noopener">降域演示.mov</a><br><a href="https://github.com/jirengu-inc/jrg-renwu3/tree/master/homework/%E5%BD%AD%E5%A8%89%E5%A9%B7/lv31-%E9%99%8D%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81" target="_blank" rel="noopener">降域演示代码</a></p>
+<h3 id="三-jsonp-的原理是什么"><a href="#三-jsonp-的原理是什么" class="headerlink" title="三.jsonp 的原理是什么"></a>三.jsonp 的原理是什么</h3><p>&#160; &#160; &#160; &#160;与上题类似，就是请求的a.com创建一个动态script，在src里加入一个在a.com中已被定义的一个函数的名字，然后服务端读到这个函数名后再加括号，括号里加参数(从数据库取到的数据，数据格式一般为json)的形式返回给a.com，这样a.com就以参数传递的形式拿到了b.com的数据。<br><a href="http://leanote.com/api/file/getAttach?fileId=5767ae6cab64415d8b0072c8" target="_blank" rel="noopener">模拟JSONP降域演示.mov</a><br><a href="https://github.com/jirengu-inc/jrg-renwu3/tree/master/homework/%E5%BD%AD%E5%A8%89%E5%A9%B7/lv31-%E9%99%8D%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81/jsonp%E8%B7%A8%E5%9F%9F%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81" target="_blank" rel="noopener">具体代码</a></p>
+<h3 id="四-CORS是什么"><a href="#四-CORS是什么" class="headerlink" title="四.CORS是什么"></a>四.CORS是什么</h3><p>&#160; &#160; &#160; &#160;跨域资源共享，W3C标准，允许浏览器向服务器跨源的发出XMLHttpRequest请求，因为跨源，肯定需要添加一些额外的信息，其实就是一些请求头的设置，然后服务端根据你发出的这些额外信息判断我是否允许你的请求，如果我给你返回的头信息字段里有Access-Control-Allow-Origin就表示我允许了，可以返给你跨域的数据了。其他的aiax请求与同源请求无异，不支持ie6-10。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/27/利用负margin进行常见布局/" rel="next" title="利用负margin进行常见布局">
+                <i class="fa fa-chevron-left"></i> 利用负margin进行常见布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/21/原型链/" rel="prev" title="原型链">
+                原型链 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">pingtingpeng</p>
+              <p class="site-description motion-element" itemprop="description">学习总结 思考感悟 知识管理</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-什么是同源策略"><span class="nav-number">1.</span> <span class="nav-text">一.什么是同源策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-什么是跨域？跨域有几种实现形式"><span class="nav-number">2.</span> <span class="nav-text">二.什么是跨域？跨域有几种实现形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-jsonp-的原理是什么"><span class="nav-number">3.</span> <span class="nav-text">三.jsonp 的原理是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-CORS是什么"><span class="nav-number">4.</span> <span class="nav-text">四.CORS是什么</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">pingtingpeng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
 
 <script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  c.click(function(){
-    ta.css('display', 'block').addClass('fadeIn');
-  });
-  o.click(function(){
-    ta.css('display', 'none');
-  });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-
-  $('.hoverqrcode').hide();
-
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
-  });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
-</script>
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-}); 
 </script>
 
 
 
-<!-- Analytics Begin -->
 
 
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 
 
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
+  
 
 
-<!-- MathJax End -->
 
-<!-- Tiny_search Begin -->
 
-<!-- Tiny_search End -->
 
-  </body>
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
