@@ -232,6 +232,371 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/30/现代计算机语言分类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/05/30/现代计算机语言分类/" itemprop="url">现代计算机语言分类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-30T23:16:57+08:00">
+                2021-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/09/设计模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/09/设计模式/" itemprop="url">设计模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-09T16:30:50+08:00">
+                2020-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一-创建型模式"><a href="#一-创建型模式" class="headerlink" title="一.创建型模式"></a>一.创建型模式</h2><h3 id="1-工厂方法模式"><a href="#1-工厂方法模式" class="headerlink" title="1.工厂方法模式"></a>1.工厂方法模式</h3><p>&#160; &#160; &#160; &#160;适用场景：无法预知对象确切类别及其依赖关系<br>&#160; &#160; &#160; &#160;以下代码仅为示意，并不严谨，适用typeScript语言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Application</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">const</span> dialog = <span class="keyword">new</span> Dialog()</span><br><span class="line">    &#125;</span><br><span class="line">    init = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> config = readApplicationConfigFile()</span><br><span class="line">         <span class="keyword">if</span> (config.OS == <span class="string">"Windows"</span>)</span><br><span class="line">            dialog = <span class="keyword">new</span> WindowsDialog()</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (config.OS == <span class="string">"Web"</span>)</span><br><span class="line">            dialog = <span class="keyword">new</span> WebDialog()</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"错误！未知的操作系统。"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    main = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.init()</span><br><span class="line">        dialog.render()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dialog</span></span>&#123;</span><br><span class="line">    createButton = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WindowsDialog</span> <span class="keyword">extends</span> <span class="title">Dialog</span></span>&#123;</span><br><span class="line">    createButton = <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="keyword">return</span> <span class="keyword">new</span> WindowsButton()&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WebDialog</span> <span class="keyword">extends</span> <span class="title">Dialog</span></span>&#123;</span><br><span class="line">    createButton = <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="keyword">return</span> <span class="keyword">new</span> HTMLButton()&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Button&#123;</span><br><span class="line">    onClick = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WindowsButton</span> <span class="title">implements</span> <span class="title">Button</span></span>&#123;</span><br><span class="line">    onClick = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HTMLButton</span> <span class="title">implements</span> <span class="title">Button</span></span>&#123;</span><br><span class="line">    onClick = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    render = <span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-抽象工厂模式"><a href="#2-抽象工厂模式" class="headerlink" title="2.抽象工厂模式"></a>2.抽象工厂模式</h3><p>&#160; &#160; &#160; &#160;适用场景：代码需要与多个不同系列的相关产品交互。接口interface-&gt;创造出不同系列的产品</p>
+<h3 id="3-生成器模式"><a href="#3-生成器模式" class="headerlink" title="3.生成器模式"></a>3.生成器模式</h3><p>&#160; &#160; &#160; &#160;适用场景：避免 “重叠构造函数” 的出现(new House(4,2,4,true,null,null,null,……))</p>
+<h3 id="4-原型模式"><a href="#4-原型模式" class="headerlink" title="4.原型模式"></a>4.原型模式</h3><p>&#160; &#160; &#160; &#160;适用场景:想生成一个完全相同的对象，但是私有成员变量不可被复制<br>需要复制一些对象， 同时又希望代码独立于这些对象所属的具体类， 可以使用原型模式。</p>
+<h3 id="5-单例模式"><a href="#5-单例模式" class="headerlink" title="5.单例模式"></a>5.单例模式</h3><p>&#160; &#160; &#160; &#160;适用场景:保证一个类只有一个实例， 并提供一个访问该实例的全局节点</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/实现一个类React框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/22/实现一个类React框架/" itemprop="url">实现一个类React框架</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-22T01:25:01+08:00">
+                2020-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>step1:环境搭建<br>step2:实dom渲染的TReact实现<br>//main.js<br>import {TReact} from “./TReact.js”;<br>let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br> document.body.appendChild(a)<br> //TReact.js</p>
+<p> export let TReact={<br>     createElement(type,attributes,…children){<br>         //创建真实dom<br>         let element = document.createElement(type)<br>         //塞上属性<br>         for(let name in attributes){<br>             element.setAttribute(name,attributes[name])<br>         }<br>         //加上children(考虑文本)<br>         for(let child of children){<br>             if(typeof child === ‘string’)<br>                child = document.createTextNode(child)<br>             element.appendChild(child)<br>         }<br>         return element<br>     }<br> }</p>
+<p> //加入是react的话<br> import React from “react”<br> import ReactDOM from “react-dom”;<br> let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br>ReactDOM.render(<br>    a,<br>    document.getElementById(‘root’)<br>)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/28/webpack打包原理分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1098,353 +1463,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/23/继承/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="pingtingpeng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pingtingpeng's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/06/23/继承/" itemprop="url">继承</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-23T17:26:57+08:00">
-                2016-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-继承有什么作用"><a href="#1-继承有什么作用" class="headerlink" title="1.继承有什么作用?"></a>1.继承有什么作用?</h3><p>&#160; &#160; &#160; &#160;提高了代码的复用性，便于扩展软件功能。</p>
-<h3 id="2-有几种常见创建对象的方式-举例说明"><a href="#2-有几种常见创建对象的方式-举例说明" class="headerlink" title="2.有几种常见创建对象的方式? 举例说明?"></a>2.有几种常见创建对象的方式? 举例说明?</h3><p>&#160; &#160; &#160; &#160;1.对象字面量，无法传参</p>
-<pre><code>var person={
-       name:&apos;simple&apos;,
-       sayName:function(){
-         console.log(&apos;my name is &apos;+this.name);
-     }
-}
- person.sayName();
-</code></pre><p>&#160; &#160; &#160; &#160;2.工厂模式,可以传参，不能识别对象类型</p>
-<pre><code>function Person(name){
-       var obj={
-       name:&apos;simple&apos;,
-       sayName:function(){
-       console.log(&apos;my name is &apos;+this.name);
-   }
-};
-  return obj;
-}
- var p1=Person(&apos;simple&apos;);//实例化
- p1.sayName();//方法调用
-</code></pre><p>&#160; &#160; &#160; &#160;3.构造函数,可以传参，可以识别对象类型，但会造成重复造轮子</p>
-<pre><code>function Person(name){
-     this.name=name;
-     this.sayName=function(){
-          console.log(&apos;my name is&apos;+this.name);
-   }
-}
-  var p1=new Person(&apos;simple&apos;);
-  p1.sayName();
-</code></pre><p>&#160; &#160; &#160; &#160;4.原型模式</p>
-<pre><code>function Person(name){
-    //个性化的属性或方法
-       this.name=name;
- }
-Person.prototype.sayName=function(){
-  console.log(&apos;my name is &apos;+this.name);
-}
-  var p1=new Person(&apos;simple&apos;);
-  p1.sayName();
-</code></pre><h3 id="3-下面两种写法有什么区别"><a href="#3-下面两种写法有什么区别" class="headerlink" title="3.下面两种写法有什么区别?"></a>3.下面两种写法有什么区别?</h3><p>&#160; &#160; &#160; &#160;</p>
-<pre><code>代码//方法1
-function People(name, sex){
- this.name = name;
- this.sex = sex;
- this.printName = function(){
-    console.log(this.name);
-  }
-}
-var p1 = new People(&apos;饥人谷&apos;, 2)//这种方法每new一个对象，就要创建一次printName方法，new n个，需要创建n次printName方法
-//方法2
-function Person(name, sex){
- this.name = name;
- this.sex = sex;
-}
-Person.prototype.printName = function(){
-console.log(this.name);
-}
-var p1 = new Person(&apos;若愚&apos;, 27);//new n个对象，只需要创建1次printName方法
-</code></pre><h3 id="4-Object-create-有什么作用？兼容性如何？如何使用？"><a href="#4-Object-create-有什么作用？兼容性如何？如何使用？" class="headerlink" title="4.Object.create 有什么作用？兼容性如何？如何使用？"></a>4.Object.create 有什么作用？兼容性如何？如何使用？</h3><p>&#160; &#160; &#160; &#160;Object.create(proto, [ propertiesObject ]),是ES5中提出的一种新的对象创建方式,<br>&#160; &#160;&#160;&#160;兼容性：只兼容IE9+，Chrome5+，Firefox 4.0+，Opear 11.60+,Safari 5+<br>&#160; &#160;&#160;&#160;第一个参数是要继承的原型或null,第二个参数可选,是对象的属性描述符，里面可以添加一些自定义的属性和方法。<br>&#160; &#160; &#160; &#160;propertiesObject:默认都为false<br>&#160; &#160; &#160; &#160;数据属性：<br>&#160; &#160; &#160; &#160;writable:是否可任意写<br>&#160; &#160; &#160;&#160; configurable：是否能够删除，是否能够被修改<br>&#160; &#160; &#160;&#160; enumerable：是否能用 for in 枚举<br>&#160; &#160; &#160;&#160; value：值<br>&#160; &#160; &#160;&#160;访问属性：<br>&#160; &#160; &#160;&#160; get(): 访问<br>&#160; &#160; &#160;&#160; set(): 设置</p>
-<pre><code>var obj = {
-    a:function(){
-        console.log(100)
-    },
-    b:function(){
-        console.log(200)
-    },
-    c:function(){
-        console.log(300)
-    }
-
-};
-
- newObj = {};
-
-var newObj = Object.create(obj,{
-    t1:{
-        value:&apos;yupeng&apos;,
-        writable:true
-    },
-    bar: {
-        configurable: false,
-        get: function() { return bar; },
-        set: function(value) { bar=value }
-    }
-
-})
-
-console.log(newObj.a());//100
-console.log(newObj.t1);//yupeng
-newObj.t1=&apos;yupeng1&apos;
-console.log(newObj.t1);//yupeng1  如果writable:false则为yupeng
-newObj.bar=201;
-console.log(newObj.bar)//通过set设值201
-</code></pre><h3 id="5-hasOwnProperty有什么作用？-如何使用？"><a href="#5-hasOwnProperty有什么作用？-如何使用？" class="headerlink" title="5.hasOwnProperty有什么作用？ 如何使用？"></a>5.hasOwnProperty有什么作用？ 如何使用？</h3><p>&#160; &#160; &#160; &#160;判断实例化后的对象的属性是属于父类的还是自己的，如果是属于自己的，返回true,属于父类的，返回false</p>
-<pre><code> function Person(name, sex){
-  this.name=name;
-  this.sex=sex;
-}
-
-Person.prototype.getName = function(){
-  return this.name;
-};
-
-function Male(name, sex, age){
-  // Person.call(this,name,sex);
-  this.age=age;
-}
-
-Male.prototype= new Person();
-var p1 = new Male(&apos;若愚&apos;, &apos;男&apos;, 27);
-p1.lc=&apos;hz&apos;;
-var p2 = new Male(&apos;simple&apos;, &apos;女&apos;, 18);
-p1.hasOwnProperty(&apos;name&apos;)//false
-p1.hasOwnProperty(&apos;sex&apos;)//false
-p1.hasOwnProperty(&apos;age&apos;)//true
-p1.hasOwnProperty(&apos;lc&apos;)//true
-p2.hasOwnProperty(&apos;lc&apos;)//false
-</code></pre><h3 id="6-实现Object-create的-polyfill"><a href="#6-实现Object-create的-polyfill" class="headerlink" title="6.实现Object.create的 polyfill"></a>6.实现Object.create的 polyfill</h3><pre><code>//不支持第二个参数
-if (typeof Object.create != &apos;function&apos;) {//首先判断是否兼容
-Object.create = (function() {
-var Temp = function() {};
-return function (prototype) {
-  if (arguments.length &gt; 1) {
-    throw Error(&apos;Second argument not supported&apos;);
-  }
-  if(prototype !== Object(prototype)) {
-    throw TypeError(&apos;Argument must be an object&apos;);
-  }
-  if (prototype === null) {
-    throw Error(&apos;null [[Prototype]] not supported&apos;);
-  }
-  Temp.prototype = prototype;
-  var result = new Temp();
-  Temp.prototype = null;
-  return result;
-};
- })();
- }
-</code></pre><h3 id="7-如下代码中call的作用是什么"><a href="#7-如下代码中call的作用是什么" class="headerlink" title="7.如下代码中call的作用是什么?"></a>7.如下代码中call的作用是什么?</h3><pre><code>function Person(name, sex){
-  this.name = name;
-  this.sex = sex;
-}
-function Male(name, sex, age){
-Person.call(this, name, sex);    //把this的作用域指向Person，因此得以继承Person的name和sex属性
-this.age = age;
-</code></pre><p>}</p>
-<h3 id="8-补全代码，实现继承"><a href="#8-补全代码，实现继承" class="headerlink" title="8.补全代码，实现继承"></a>8.补全代码，实现继承</h3><pre><code>function Person(name, sex){
-// todo ...
-}
-
-Person.prototype.getName = function(){
-// todo ...
-};
-
-function Male(name, sex, age){
- //todo ...
-}
-
-//todo ...
-Male.prototype.getAge = function(){
-//todo ...
-};
-
-var simple = new Male(‘简单’, &apos;男&apos;, 27);
-simple.printName();
-</code></pre><p>&#160; &#160; &#160; &#160;法1，只能在新浏览器上运行</p>
-<pre><code>function Person(name, sex){
-  this.name=name;
-  this.sex=sex;
-}
-
-Person.prototype.getName = function(){
-  return this.name;
-};
-
-function Male(name, sex, age){
-  Person.call(this,name,sex);
-  this.age=age;
-}
-
-inherit(Person,Male);
-
-Male.prototype.getAge = function(){
-  return this.age;
-};
-Male.prototype.printName=function(){
-  console.log(&quot;my name is &quot;+this.name);
-}
-var simple = new Male(‘简单’, &apos;男&apos;, 27);
-simple.printName();
-
-function inherit(superType,subType){
-var _prototype=Object.create(superType.prototype);//拷贝一份新的prototype
-_prototype.constructor=subType;//将constructor指向子类
-subType.prototype=_prototype;//将子类的prototype指向新的prototype
-
-}
-</code></pre><p>&#160; &#160; &#160; &#160;法2，兼容性较好</p>
-<pre><code>function Person(name, sex){
-  this.name=name;
-  this.sex=sex;
-}
-
-Person.prototype.getName = function(){
-  return this.name;
-};
-
-function Male(name, sex, age){
-  Person.call(this,name,sex);
-  this.age=age;
-}
-
-Male.prototype= new Person();//new Person只是为了去获取Person里的方法
-Male.prototype.constructor=Male;
-
-Male.prototype.getAge = function(){
-  return this.age;
-};
-Male.prototype.printName=function(){
-  console.log(&quot;my name is &quot;+this.name);
-}
-
-var simple = new Male(‘简单’, &apos;男&apos;, 27);
-simple.printName();
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1488,7 +1513,7 @@ simple.printName();
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1529,7 +1554,7 @@ simple.printName();
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

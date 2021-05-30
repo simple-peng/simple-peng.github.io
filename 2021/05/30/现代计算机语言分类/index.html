@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="redux核心实现有四个： 存储状态state 获取状态getState 更新状态dispatch 变更订阅subscribe12345678910111213141516171819202122232425export function createStore(reducer,enhancer)&amp;#123;    if(enhancer)&amp;#123;        return enhancer">
+<meta name="description" content="学习总结 思考感悟 知识管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redux原理核心实现">
-<meta property="og:url" content="http://yoursite.com/2020/05/21/redux原理核心实现/index.html">
+<meta property="og:title" content="现代计算机语言分类">
+<meta property="og:url" content="http://yoursite.com/2021/05/30/现代计算机语言分类/index.html">
 <meta property="og:site_name" content="pingtingpeng&#39;s blog">
-<meta property="og:description" content="redux核心实现有四个： 存储状态state 获取状态getState 更新状态dispatch 变更订阅subscribe12345678910111213141516171819202122232425export function createStore(reducer,enhancer)&amp;#123;    if(enhancer)&amp;#123;        return enhancer">
+<meta property="og:description" content="学习总结 思考感悟 知识管理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-21T04:19:26.000Z">
+<meta property="og:updated_time" content="2021-05-30T15:16:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redux原理核心实现">
-<meta name="twitter:description" content="redux核心实现有四个： 存储状态state 获取状态getState 更新状态dispatch 变更订阅subscribe12345678910111213141516171819202122232425export function createStore(reducer,enhancer)&amp;#123;    if(enhancer)&amp;#123;        return enhancer">
+<meta name="twitter:title" content="现代计算机语言分类">
+<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/21/redux原理核心实现/">
+  <link rel="canonical" href="http://yoursite.com/2021/05/30/现代计算机语言分类/">
 
 
 
 
 
-  <title>redux原理核心实现 | pingtingpeng's blog</title>
+  <title>现代计算机语言分类 | pingtingpeng's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/21/redux原理核心实现/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/30/现代计算机语言分类/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pingtingpeng">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">redux原理核心实现</h1>
+          <h1 class="post-title" itemprop="name headline">现代计算机语言分类</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-21T11:59:59+08:00">
-                2020-05-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-30T23:16:57+08:00">
+                2021-05-30
               </time>
             
 
@@ -299,14 +299,7 @@
       
 
       
-        <h3 id="redux核心实现有四个："><a href="#redux核心实现有四个：" class="headerlink" title="redux核心实现有四个："></a>redux核心实现有四个：</h3><ul>
-<li>存储状态state</li>
-<li>获取状态getState</li>
-<li>更新状态dispatch</li>
-<li>变更订阅subscribe<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">createStore</span>(<span class="params">reducer,enhancer</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(enhancer)&#123;</span><br><span class="line">        <span class="keyword">return</span> enhancer(createStore)(reducer);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> currentState = <span class="literal">undefined</span>;</span><br><span class="line">    <span class="keyword">let</span> currentListeners = [];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getState</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> currentState</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">dispatch</span>(<span class="params">action</span>)</span>&#123;</span><br><span class="line">        currentState = reducer(currentState,action);</span><br><span class="line">        currentListeners.map(<span class="function"><span class="params">item</span> =&gt;</span> item());</span><br><span class="line">        <span class="keyword">return</span> action</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">subscribe</span>(<span class="params">cb</span>)</span>&#123;</span><br><span class="line">        currentListeners.push(cb)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//初始化状态</span></span><br><span class="line">    dispatch(&#123;<span class="attr">type</span>: <span class="string">"@@redux/INIT9.l.a.l.v.9"</span>&#125;);</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        getState,</span><br><span class="line">        dispatch,</span><br><span class="line">        subscribe</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="redux中间件实现："><a href="#redux中间件实现：" class="headerlink" title="redux中间件实现："></a>redux中间件实现：</h3>
+        
       
     </div>
     
@@ -330,8 +323,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/21/原型链/" rel="next" title="原型链">
-                <i class="fa fa-chevron-left"></i> 原型链
+              <a href="/2020/10/09/设计模式/" rel="next" title="设计模式">
+                <i class="fa fa-chevron-left"></i> 设计模式
               </a>
             
           </div>
@@ -339,10 +332,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/22/react-router原理核心实现/" rel="prev" title="react-router原理核心实现">
-                react-router原理核心实现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -394,17 +383,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -446,22 +426,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#redux核心实现有四个："><span class="nav-number">1.</span> <span class="nav-text">redux核心实现有四个：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redux中间件实现："><span class="nav-number">2.</span> <span class="nav-text">redux中间件实现：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
