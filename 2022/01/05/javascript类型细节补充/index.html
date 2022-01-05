@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
+<meta name="description" content="对每个前端程序员来说,JavaScript类型几乎都是最为熟悉的概念了。但是你真的很了解它们吗？我们不妨来看看下面的几个问题。 1.为什么有的编程规范要求用 void 0 代替 undefined?Undefined类型表示未定义，它的类型只有一个值，就是undefined。但是呢，因为JavaScript的代码undefined是一个变量，而并非是一个关键字，这是JavaScript语言公认的设">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript类型细节补充">
 <meta property="og:url" content="http://yoursite.com/2022/01/05/javascript类型细节补充/index.html">
 <meta property="og:site_name" content="pingtingpeng&#39;s blog">
-<meta property="og:description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
+<meta property="og:description" content="对每个前端程序员来说,JavaScript类型几乎都是最为熟悉的概念了。但是你真的很了解它们吗？我们不妨来看看下面的几个问题。 1.为什么有的编程规范要求用 void 0 代替 undefined?Undefined类型表示未定义，它的类型只有一个值，就是undefined。但是呢，因为JavaScript的代码undefined是一个变量，而并非是一个关键字，这是JavaScript语言公认的设">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-01-05T07:55:11.000Z">
+<meta property="og:updated_time" content="2022-01-05T08:21:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript类型细节补充">
-<meta name="twitter:description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
+<meta name="twitter:description" content="对每个前端程序员来说,JavaScript类型几乎都是最为熟悉的概念了。但是你真的很了解它们吗？我们不妨来看看下面的几个问题。 1.为什么有的编程规范要求用 void 0 代替 undefined?Undefined类型表示未定义，它的类型只有一个值，就是undefined。但是呢，因为JavaScript的代码undefined是一个变量，而并非是一个关键字，这是JavaScript语言公认的设">
 
 
 
@@ -299,7 +299,10 @@
       
 
       
-        <h3 id="1-为什么有的编程规范要求用-void-0-代替-undefined"><a href="#1-为什么有的编程规范要求用-void-0-代替-undefined" class="headerlink" title="1.为什么有的编程规范要求用 void 0 代替 undefined?"></a>1.为什么有的编程规范要求用 void 0 代替 undefined?</h3>
+        <p>对每个前端程序员来说,JavaScript类型几乎都是最为熟悉的概念了。但是你真的很了解它们吗？我们不妨来看看下面的几个问题。</p>
+<h3 id="1-为什么有的编程规范要求用-void-0-代替-undefined"><a href="#1-为什么有的编程规范要求用-void-0-代替-undefined" class="headerlink" title="1.为什么有的编程规范要求用 void 0 代替 undefined?"></a>1.为什么有的编程规范要求用 void 0 代替 undefined?</h3><p>Undefined类型表示未定义，它的类型只有一个值，就是undefined。但是呢，因为JavaScript的代码undefined是一个变量，而并非是一个关键字，这是JavaScript语言公认的设计失误之一，所以，我们为了避免无意中被篡改，建议使用void 0 来获取undefined值。</p>
+<h3 id="2-Null与Undefined的区别"><a href="#2-Null与Undefined的区别" class="headerlink" title="2.Null与Undefined的区别"></a>2.Null与Undefined的区别</h3><p>Undefined类型表示未定义，它的类型只有一个值，就是undefined。任何变量在赋值前是Undefined类型、值为undefined。<br>Null表示的是：“定义了但是为空”。所以，在实际编程时，我们一般不会把变量赋值为 undefined，这样可以保证所有值为 undefined 的变量，都是从未赋值的自然状态。<br>Null是JavaScript关键字，所以在任何代码中，你都可以放心用 null 关键字来获取 null 值。</p>
+
       
     </div>
     
@@ -332,6 +335,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/01/05/javascript类型细节补充-1/" rel="prev" title="javascript类型细节补充">
+                javascript类型细节补充 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -408,7 +415,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -445,7 +452,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-为什么有的编程规范要求用-void-0-代替-undefined"><span class="nav-number">1.</span> <span class="nav-text">1.为什么有的编程规范要求用 void 0 代替 undefined?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-为什么有的编程规范要求用-void-0-代替-undefined"><span class="nav-number">1.</span> <span class="nav-text">1.为什么有的编程规范要求用 void 0 代替 undefined?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Null与Undefined的区别"><span class="nav-number">2.</span> <span class="nav-text">2.Null与Undefined的区别</span></a></li></ol></div>
             
 
           </div>
