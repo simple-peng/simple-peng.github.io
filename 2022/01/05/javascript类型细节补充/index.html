@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
+<meta name="description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实现一个类React框架">
-<meta property="og:url" content="http://yoursite.com/2020/07/22/实现一个类React框架/index.html">
+<meta property="og:title" content="javascript类型细节补充">
+<meta property="og:url" content="http://yoursite.com/2022/01/05/javascript类型细节补充/index.html">
 <meta property="og:site_name" content="pingtingpeng&#39;s blog">
-<meta property="og:description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
+<meta property="og:description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-21T18:08:35.000Z">
+<meta property="og:updated_time" content="2022-01-05T07:55:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实现一个类React框架">
-<meta name="twitter:description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
+<meta name="twitter:title" content="javascript类型细节补充">
+<meta name="twitter:description" content="1.为什么有的编程规范要求用 void 0 代替 undefined?">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/22/实现一个类React框架/">
+  <link rel="canonical" href="http://yoursite.com/2022/01/05/javascript类型细节补充/">
 
 
 
 
 
-  <title>实现一个类React框架 | pingtingpeng's blog</title>
+  <title>javascript类型细节补充 | pingtingpeng's blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/实现一个类React框架/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/05/javascript类型细节补充/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pingtingpeng">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">实现一个类React框架</h1>
+          <h1 class="post-title" itemprop="name headline">javascript类型细节补充</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-22T01:25:01+08:00">
-                2020-07-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-05T15:51:18+08:00">
+                2022-01-05
               </time>
             
 
@@ -299,10 +299,7 @@
       
 
       
-        <p>step1:环境搭建<br>step2:实dom渲染的TReact实现<br>//main.js<br>import {TReact} from “./TReact.js”;<br>let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br> document.body.appendChild(a)<br> //TReact.js</p>
-<p> export let TReact={<br>     createElement(type,attributes,…children){<br>         //创建真实dom<br>         let element = document.createElement(type)<br>         //塞上属性<br>         for(let name in attributes){<br>             element.setAttribute(name,attributes[name])<br>         }<br>         //加上children(考虑文本)<br>         for(let child of children){<br>             if(typeof child === ‘string’)<br>                child = document.createTextNode(child)<br>             element.appendChild(child)<br>         }<br>         return element<br>     }<br> }</p>
-<p> //加入是react的话<br> import React from “react”<br> import ReactDOM from “react-dom”;<br> let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br>ReactDOM.render(<br>    a,<br>    document.getElementById(‘root’)<br>)</p>
-
+        <h3 id="1-为什么有的编程规范要求用-void-0-代替-undefined"><a href="#1-为什么有的编程规范要求用-void-0-代替-undefined" class="headerlink" title="1.为什么有的编程规范要求用 void 0 代替 undefined?"></a>1.为什么有的编程规范要求用 void 0 代替 undefined?</h3>
       
     </div>
     
@@ -326,8 +323,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/28/webpack打包原理分析/" rel="next" title="webpack打包原理分析">
-                <i class="fa fa-chevron-left"></i> webpack打包原理分析
+              <a href="/2021/05/30/现代计算机语言分类/" rel="next" title="现代计算机语言分类">
+                <i class="fa fa-chevron-left"></i> 现代计算机语言分类
               </a>
             
           </div>
@@ -335,10 +332,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/10/09/设计模式/" rel="prev" title="设计模式">
-                设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -390,8 +383,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -433,6 +435,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-为什么有的编程规范要求用-void-0-代替-undefined"><span class="nav-number">1.</span> <span class="nav-text">1.为什么有的编程规范要求用 void 0 代替 undefined?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

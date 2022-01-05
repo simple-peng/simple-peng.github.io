@@ -232,6 +232,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/01/05/javascript类型细节补充/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="pingtingpeng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pingtingpeng's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/01/05/javascript类型细节补充/" itemprop="url">javascript类型细节补充</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-01-05T15:51:18+08:00">
+                2022-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-为什么有的编程规范要求用-void-0-代替-undefined"><a href="#1-为什么有的编程规范要求用-void-0-代替-undefined" class="headerlink" title="1.为什么有的编程规范要求用 void 0 代替 undefined?"></a>1.为什么有的编程规范要求用 void 0 代替 undefined?</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/30/现代计算机语言分类/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1343,132 +1462,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/25/html基础1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="pingtingpeng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pingtingpeng's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/06/25/html基础1/" itemprop="url">html基础(问答一)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-25T10:57:28+08:00">
-                2016-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="一-网页乱码是如何产生的"><a href="#一-网页乱码是如何产生的" class="headerlink" title="一.网页乱码是如何产生的"></a>一.网页乱码是如何产生的</h3><p>UNICODE给了每个字符一个代号，而GBK和UTF-8使用不同的规则来表示同一个代号，GBK用2个字节表示一个汉字，UTF-8用2～6个字节表示一个汉字。<br>乱码产生的原因在于html文件保存的编码方式与浏览器解码的方式不匹配，比如你用gbk的编码方式去保存一个汉字，两个字节，但是浏览器使用UTF-8去解码，这两个字节在UTF-8的编码规则里就不是表示一个汉字了，可能就是其他国家的语言了，这时候需要在html里加<code>&lt;meta charset=“gbk”&gt;</code>指定浏览器的解码方式为gbk。</p>
-<h3 id="二-颜色有几种写法"><a href="#二-颜色有几种写法" class="headerlink" title="二.颜色有几种写法"></a>二.颜色有几种写法</h3><p>1.一些特殊的颜色可以直接用颜色名表示，比如：red,blue,black,yellow等<br>2.16进制表示法，如＃ff0000,ff代表红色，00代表绿色，00代表蓝色<br>3.rgb(255,0,0)<br>4.rgb(100%,0,0)</p>
-<h3 id="三-DOCTYPE-html的作用是什么"><a href="#三-DOCTYPE-html的作用是什么" class="headerlink" title="三.DOCTYPE html的作用是什么"></a>三.DOCTYPE html的作用是什么</h3><p>声明文档的解析类型，避免浏览器的怪异模式。如果你的页面没有DOCTYPE的声明，浏览器按照自己的方式解析渲染页面，那么，在不同的浏览器就会显示不同的样式。 如果你的页面添加了<code>&lt;!DOCTYPE html&gt;</code>那么浏览器按照W3C的标准解析渲染页面，这样一来，你的页面在所有的浏览器里显示的就都是一个样子了。</p>
-<h3 id="四-严格模式和混杂模式指什么"><a href="#四-严格模式和混杂模式指什么" class="headerlink" title="四.严格模式和混杂模式指什么"></a>四.严格模式和混杂模式指什么</h3><p>当Netscape4和IE4实现CSS机制时，并没有遵循W3C提出的标准。随着标准一致性变得越来越重要，浏览器开发商不得不面临一个艰难的抉择：逐渐遵循W3C的标准是前进的方向。但是改变现有CSS的实现，完整去遵循标准，会使许多网站或多或少受到破坏。<br>解决办法：所有的浏览器需要提供两种模式：混杂模式服务于旧式规则，严格模式服务于标准规则。DOCTYPE正是用来告诉浏览器使用哪种DTD(文档类型定义)。<br>1.没有DOCTYPE’意味着触发混杂模式<br>2.大部分的/新的/未知的DOCTYPE声明将触发严格模式<br>3.一些页面依据混杂模式而写，但是却包含DOCTYPE。这种情况下各个浏览器依据自己的DOCTYPE规则列表来触发混杂模式。</p>
-<h3 id="五-meta-有什么作用，常见的值有哪些"><a href="#五-meta-有什么作用，常见的值有哪些" class="headerlink" title="五.meta 有什么作用，常见的值有哪些"></a>五.meta 有什么作用，常见的值有哪些</h3><p>meta可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词，定义页面的使用语言，自动刷新并指向新的页面。</p>
-<p>meta标签共有两个属性，它们分别是http-equiv属性和name属性。<br>1、name属性<br>　　name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。<br>　　meta标签的name属性语法格式是：＜meta name=“参数” content=”具体的参数值”＞ 。<br>　　其中name属性主要有以下几种参数：<br>　　A、Keywords(关键字)，用来告诉搜索引擎你网页的关键字是什么。<br>　　B、description(网站内容描述)，用来告诉搜索引擎你的网站主要内容。<br>　　C、robots(机器人向导)，用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。<br>　　D、author(作者)，标注网页的作者<br>2、http-equiv属性<br>　　http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。<br>　　meta标签的http-equiv属性语法格式是：＜meta http-equiv=“参数” content=”参数变量值”＞ ；其中http-equiv属性主要有以下几种参数：<br>　　A、Expires(期限)，可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。<br>　　B、Pragma(cache模式)，禁止浏览器从本地计算机的缓存中访问页面内容。<br>　　C、Refresh(刷新)，自动刷新并指向新页面。<br>　　D、Set-Cookie(cookie设定)，如果网页过期，那么存盘的cookie将被删除。<br>　　E、content-Type(显示字符集的设定)，设定页面使用的字符集。<br>　　用法：＜meta http-equiv=“content-Type” content=”text/html; charset=gb2312”＞</p>
-<h3 id="六-常见的浏览器有哪些，什么内核"><a href="#六-常见的浏览器有哪些，什么内核" class="headerlink" title="六.常见的浏览器有哪些，什么内核"></a>六.常见的浏览器有哪些，什么内核</h3><p>IE 使用 Trident 引擎，闭源，只有微软的 IE 在使用，目前市场占有率世界第一。<br>Firefox 使用 Gecko 引擎，跨平台，就是以前的 Netscape 使用的 Mozilla 引擎，Netscape 倒了以后，成立了 Mozilla 基金会，将这个引擎完全重写，开源，市场占有率达到了第二。<br>Safari/chrome使用的引擎是苹果公司根据 KHTML 修改来的 WebKit，闭源，IPhone 上的浏览器也是用这个引擎。<br>Opera 的引擎是 Presto，闭源，也是跨平台的，速度也很快，原先的老二。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1519,7 +1512,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1560,7 +1553,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

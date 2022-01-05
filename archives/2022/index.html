@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
-<meta property="og:type" content="article">
-<meta property="og:title" content="实现一个类React框架">
-<meta property="og:url" content="http://yoursite.com/2020/07/22/实现一个类React框架/index.html">
+<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pingtingpeng&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/archives/2022/index.html">
 <meta property="og:site_name" content="pingtingpeng&#39;s blog">
-<meta property="og:description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
+<meta property="og:description" content="学习总结 思考感悟 知识管理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-21T18:08:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实现一个类React框架">
-<meta name="twitter:description" content="step1:环境搭建step2:实dom渲染的TReact实现//main.jsimport {TReact} from “./TReact.js”;let a =         Hello        Hello        Hello document.body.appendChild(a) //TReact.js  export let TReact={     createEleme">
+<meta name="twitter:title" content="pingtingpeng&#39;s blog">
+<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
 
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/22/实现一个类React框架/">
+  <link rel="canonical" href="http://yoursite.com/archives/2022/">
 
 
 
 
 
-  <title>实现一个类React框架 | pingtingpeng's blog</title>
+  <title>Archive | pingtingpeng's blog</title>
   
 
 
@@ -144,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,147 +217,72 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        Um..! 12 posts in total. Keep on posting.
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2022">2022</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/实现一个类React框架/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="pingtingpeng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pingtingpeng's blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">实现一个类React框架</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2022/01/05/javascript类型细节补充/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">javascript类型细节补充</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-22T01:25:01+08:00">
-                2020-07-22
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2022-01-05T15:51:18+08:00" content="2022-01-05">
+          01-05
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>step1:环境搭建<br>step2:实dom渲染的TReact实现<br>//main.js<br>import {TReact} from “./TReact.js”;<br>let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br> document.body.appendChild(a)<br> //TReact.js</p>
-<p> export let TReact={<br>     createElement(type,attributes,…children){<br>         //创建真实dom<br>         let element = document.createElement(type)<br>         //塞上属性<br>         for(let name in attributes){<br>             element.setAttribute(name,attributes[name])<br>         }<br>         //加上children(考虑文本)<br>         for(let child of children){<br>             if(typeof child === ‘string’)<br>                child = document.createTextNode(child)<br>             element.appendChild(child)<br>         }<br>         return element<br>     }<br> }</p>
-<p> //加入是react的话<br> import React from “react”<br> import ReactDOM from “react-dom”;<br> let a = <div name="a" id="ida"><br>        <span>Hello</span><br>        <span>Hello</span><br>        <span>Hello</span><br></div><br>ReactDOM.render(<br>    a,<br>    document.getElementById(‘root’)<br>)</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/05/28/webpack打包原理分析/" rel="next" title="webpack打包原理分析">
-                <i class="fa fa-chevron-left"></i> webpack打包原理分析
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/10/09/设计模式/" rel="prev" title="设计模式">
-                设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -366,10 +290,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -566,10 +486,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
